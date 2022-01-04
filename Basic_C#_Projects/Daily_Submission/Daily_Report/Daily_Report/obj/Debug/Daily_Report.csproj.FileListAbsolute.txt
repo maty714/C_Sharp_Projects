@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\bin\Debug\Daily_Report.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\bin\Debug\Daily_Report.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\bin\Debug\Daily_Report.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\obj\Debug\Daily_Report.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\obj\Debug\Daily_Report.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\obj\Debug\Daily_Report.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Daily_Submission\Daily_Report\Daily_Report\obj\Debug\Daily_Report.pdb
