@@ -1,0 +1,6 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\bin\Debug\Income_Comparison.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\bin\Debug\Income_Comparison.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\bin\Debug\Income_Comparison.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\obj\Debug\Income_Comparison.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\obj\Debug\Income_Comparison.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Income Comparison\Income_Comparison\Income_Comparison\obj\Debug\Income_Comparison.pdb
