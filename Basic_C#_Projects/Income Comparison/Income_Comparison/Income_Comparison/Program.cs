@@ -31,8 +31,8 @@ namespace Income_Comparison
             string input2_hours = Console.ReadLine();
             int hours_2 = Convert.ToInt32(input2_hours);
 
-            int total_1 = rate_1 * hours_1;
-            int total_2 = rate_2 * hours_2;
+            int total_1 = (rate_1 * hours_1) * 52;
+            int total_2 = (rate_2 * hours_2) * 52;
 
             bool highest_income = total_1 > total_2;
 
