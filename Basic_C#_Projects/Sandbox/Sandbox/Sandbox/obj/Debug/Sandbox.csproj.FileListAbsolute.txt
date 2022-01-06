@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.csproj.AssemblyReference.cache
