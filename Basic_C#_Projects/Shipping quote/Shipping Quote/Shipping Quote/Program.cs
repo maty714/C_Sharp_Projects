@@ -51,7 +51,7 @@ namespace Shipping_Quote
                 Environment.Exit(0);
             }
 
-            quote = (length * width * height) / 100; 
+            quote = ((length * width * height) * weight) / 100; 
             Console.Write("Your estimated cost of shipping is: " + "$" + quote);
             Console.Read();
         }
