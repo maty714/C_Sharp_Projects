@@ -31,7 +31,8 @@ namespace Insurance_Application
 
             bool qualified = (age > 15 && DUI == false && tickets <= 3);
 
-           if (qualified == true)
+           
+            if (qualified == true)
             {
                 Console.WriteLine("Qualified?: Yes");
             }
