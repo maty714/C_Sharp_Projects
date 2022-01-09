@@ -45,14 +45,13 @@ namespace While_Statement_App
 
             do
             {
-                if (guess == true)
-                {
-                    Console.WriteLine("You guessed my name correctly! Press enter to exit");
-                    Console.Read();
-                    Environment.Exit(0);
-                }
+                //if (guess == true)
+                //{
+                //    Console.WriteLine("You guessed my name correctly! Press enter to exit");
+                
+                //}
 
-                else if (guess == false)
+                if (guess == false)
                 {
                     Console.WriteLine("You did not guess my name correctly, try again: ");
                     string input2 = Console.ReadLine();
