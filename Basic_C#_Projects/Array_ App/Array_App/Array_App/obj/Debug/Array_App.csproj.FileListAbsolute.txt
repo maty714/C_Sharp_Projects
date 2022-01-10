@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\bin\Debug\Array_App.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\bin\Debug\Array_App.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\bin\Debug\Array_App.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\obj\Debug\Array_App.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\obj\Debug\Array_App.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\obj\Debug\Array_App.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Array_ App\Array_App\Array_App\obj\Debug\Array_App.pdb

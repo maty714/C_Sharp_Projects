@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sandbox
 {
@@ -70,14 +68,17 @@ namespace Sandbox
             //Console.WriteLine(FullName);
             //Console.Read();
 
-            StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder();
 
 
-            sb.Append(new char[] { 'D', 'E', 'F' });
-            sb.Replace("E", "");
+            //sb.Append(new char[] { 'D', 'E', 'F' });
+            //sb.Replace("E", ""); // note to self: use this to remove PM in hacker rank
 
-            Console.WriteLine(sb);
-            Console.Read();
+            //Console.WriteLine(sb);
+            //Console.Read();
+
+
+
         }
     }
 }
