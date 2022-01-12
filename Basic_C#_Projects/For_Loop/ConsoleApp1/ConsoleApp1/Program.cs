@@ -13,6 +13,8 @@ namespace ConsoleApp1
             string[] myarray = {"1.", "2.", "3."};
             List<string> myList = new List<string>() { "car", "motorcycle", "truck", "airplane", "tractor", "golfcart" };
             List<string> myList2 = new List<string>() { "laptop", "ipad", "desktop", "laptop", "desktop", "smartphone", "laptop" };
+            List<string> myList3 = new List<string>() { "knife", "knife", "spoon" };
+            List<string> myList3_copy = new List<string>();
 
             //for (int i = 0; i < myarray.Length; i++)
             //{
@@ -98,9 +100,8 @@ namespace ConsoleApp1
             //    }
 
             //}
+            //assignment 6
 
-            List<string> myList3 = new List<string>() { "knife", "knife", "spoon" };
-            List<string> myList3_copy = new List<string>();
 
             foreach (string i in myList3)
             {
@@ -111,9 +112,7 @@ namespace ConsoleApp1
                     
                     if(i == j)
                     {
-                        Console.WriteLine(i + " has appeared before");
-
-                      
+                        Console.WriteLine(i + " has appeared before"); 
                     }
                     
                     
