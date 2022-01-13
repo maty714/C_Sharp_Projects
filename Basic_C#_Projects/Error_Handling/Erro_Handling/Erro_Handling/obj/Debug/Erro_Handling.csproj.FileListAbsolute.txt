@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\bin\Debug\Erro_Handling.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\bin\Debug\Erro_Handling.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\bin\Debug\Erro_Handling.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\obj\Debug\Erro_Handling.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\obj\Debug\Erro_Handling.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\obj\Debug\Erro_Handling.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Error_Handling\Erro_Handling\Erro_Handling\obj\Debug\Erro_Handling.pdb
