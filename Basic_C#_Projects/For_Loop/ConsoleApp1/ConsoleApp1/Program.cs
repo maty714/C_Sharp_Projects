@@ -51,29 +51,29 @@ namespace ConsoleApp1
             //    Console.WriteLine(myarray[i] + " " + input);
             //}
             //assignment 4
-            //Console.WriteLine("Select an item from the list: ");
-            //string item = Console.ReadLine();
+            Console.WriteLine("Select an item from the list: ");
+            string item = Console.ReadLine();
 
-            //    for (int i = 0; i < myList.Count; i++)
-            //    {
+            for (int i = 0; i < myList.Count; i++)
+            {
 
-            //        while (item == "")
-            //        {
-            //        Console.WriteLine("Please enter a value: ");
-            //        string input = Console.ReadLine();
-            //        item = input;
-            //        }
+                while (item == "")
+                {
+                    Console.WriteLine("Please enter a value: ");
+                    string input = Console.ReadLine();
+                    item = input;
+                }
 
-            //        if (item == myList[i])
-            //        {
-            //            Console.WriteLine("This item is in the list!");
-            //            break;
-            //        }
-            //        else if (i == myList.Count - 1)
-            //        {
-            //            Console.WriteLine("This item does not exist in the list");
-            //        }
-            //    }
+                if (item == myList[i])
+                {
+                    Console.WriteLine("Index " + i);
+                    break;
+                }
+                else if (i == myList.Count - 1)
+                {
+                    Console.WriteLine("This item does not exist in the list");
+                }
+            }
             //assignment 5
             //Console.WriteLine("Select an item from the list: ");
             //string item = Console.ReadLine();
@@ -90,7 +90,7 @@ namespace ConsoleApp1
 
             //    if (item == myList2[i])
             //    {
-            //        Console.WriteLine(myList2[i]);
+            //        Console.WriteLine("Index " + i);
             //        count += 1;
             //    }
 
@@ -103,24 +103,24 @@ namespace ConsoleApp1
             //assignment 6
 
 
-            foreach (string i in myList3)
-            {
-                
-                
-                foreach(string j in myList3_copy)
-                {
-                    
-                    if(i == j)
-                    {
-                        Console.WriteLine(i + " has appeared before"); 
-                    }
-                    
-                    
-                }
-                myList3_copy.Add(i);
-                
-            }
-            
+            //foreach (string i in myList3)
+            //{
+
+
+            //    foreach(string j in myList3_copy)
+            //    {
+
+            //        if(i == j)
+            //        {
+            //            Console.WriteLine(i + " has appeared before"); 
+            //        }
+
+
+            //    }
+            //    myList3_copy.Add(i);
+
+            //}
+
             Console.Read();
         }
     }
