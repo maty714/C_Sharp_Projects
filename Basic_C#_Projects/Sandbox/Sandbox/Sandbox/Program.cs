@@ -84,6 +84,7 @@ namespace Sandbox
             string input = Console.ReadLine();
             int num = Convert.ToInt32(input);
 
+            //calls each method within the class and stores the returned values withing a variable
             int addition = Math.addition(num);
             int subtraction = Math.subtraction(num);
             int multiplication = Math.multiplication(num);
