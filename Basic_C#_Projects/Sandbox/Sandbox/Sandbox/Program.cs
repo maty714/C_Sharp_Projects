@@ -79,22 +79,32 @@ namespace Sandbox
 
             //calling methods from a class
 
-            Class1 Math = new Class1();
-            Console.WriteLine("Please enter a number which will have math performed on it: ");
-            string input = Console.ReadLine();
-            int num = Convert.ToInt32(input);
+            //Class1 Math = new Class1();
+            //Console.WriteLine("Please enter a number which will have math performed on it: ");
+            //string input = Console.ReadLine();
+            //int num = Convert.ToInt32(input);
 
-            //calls each method within the class and stores the returned values withing a variable
-            int addition = Math.addition(num);
-            int subtraction = Math.subtraction(num);
-            int multiplication = Math.multiplication(num);
+            ////calls each method within the class1 and stores the returned values withing a variable
+            //int addition = Math.addition(num);
+            //int subtraction = Math.subtraction(num);
+            //int multiplication = Math.multiplication(num);
 
 
-            Console.WriteLine("Your number added by 2 = " + addition);
-            Console.WriteLine("Your number subtracted by 2 = " + subtraction);
-            Console.WriteLine("Your number multiplied by 2 = " + multiplication);
+            //Console.WriteLine("Your number added by 2 = " + addition);
+            //Console.WriteLine("Your number subtracted by 2 = " + subtraction);
+            //Console.WriteLine("Your number multiplied by 2 = " + multiplication);
 
+            //Console.Read();
+
+            Class2 math = new Class2();
+            Console.WriteLine(math.addition(2));
+            Console.WriteLine(math.addition(2, 2.44m));
+            Console.WriteLine(math.addition(2, 2.44m, "3"));
             Console.Read();
+            
+
+
+
         }
     }
 }
