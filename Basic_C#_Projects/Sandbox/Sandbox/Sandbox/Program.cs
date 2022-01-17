@@ -96,13 +96,25 @@ namespace Sandbox
 
             //Console.Read();
 
-            //Utilizes Class2 methods
-            Class2 math = new Class2();
-            Console.WriteLine(math.addition(2));
-            Console.WriteLine(math.addition(2, 2.44m));
-            Console.WriteLine(math.addition(2, 2.44m, "3"));
+            ////Utilizes Class2 methods
+            //Class2 math = new Class2();
+            //Console.WriteLine(math.addition(2));
+            //Console.WriteLine(math.addition(2, 2.44m));
+            //Console.WriteLine(math.addition(2, 2.44m, "3"));
+            //Console.Read();
+
+            //Utilizes Class3 Methods
+
+            Class3 math = new Class3();
+            Console.WriteLine("Please input up to two numbers: ");
+            string input1 = Console.ReadLine();
+            string input2 = Console.ReadLine();
+
+
+
+            math.multiply(input1);
             Console.Read();
-            
+
 
 
 
