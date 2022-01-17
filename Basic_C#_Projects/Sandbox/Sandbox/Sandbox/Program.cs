@@ -105,22 +105,31 @@ namespace Sandbox
 
 
 
-            ////Utilizes Class3 Methods
+            //Utilizes Class3 Methods
 
-            //Class3 math = new Class3();
-            //Console.WriteLine("Please input up to two numbers: ");
-            //string input1 = Console.ReadLine();
-            //string input2 = Console.ReadLine();
-            //math.multiply(input1);
-            //Console.Read();
+            Class3 math = new Class3();
+            Console.WriteLine("Please input up to two numbers: ");
+            string input1 = Console.ReadLine();
+            string input2 = Console.ReadLine();
 
 
-            //Utilizes Class4 Methods
-
-            Class4 math = new Class4();
-
-            math.math(arg2: 3, arg1: 4);
+            if (input2 == "")
+            {
+                math.multiply(input1);
+            }
+            else
+            {
+                math.multiply(input1, input2);
+            }
             Console.Read();
+
+
+            ////Utilizes Class4 Methods
+
+            //Class4 math = new Class4();
+
+            //math.math(arg2: 3, arg1: 4); //named arguments let you call each argument by name and order when called here..doesnt matter.
+            //Console.Read();
 
 
         }
