@@ -96,6 +96,7 @@ namespace Sandbox
 
             //Console.Read();
 
+            //Utilizes Class2 methods
             Class2 math = new Class2();
             Console.WriteLine(math.addition(2));
             Console.WriteLine(math.addition(2, 2.44m));
