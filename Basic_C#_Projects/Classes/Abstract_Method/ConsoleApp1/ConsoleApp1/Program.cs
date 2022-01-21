@@ -10,10 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Person people = new Employee() { FirstName = "Matt", LastName = "Clark" }; // this is an example of polymorphism
+            IQuittable iQuit = new Employee();
             Employee name = new Employee() { FirstName = "Example", LastName = "Student" };
-            name.SayName();
-            Console.Read();
 
+
+            people.SayName(); // outputs "Name: Matt Clark", if FirstName and LastName are not defined, "Name:" would be printed, because "People is created off of Employee, the SayName method is from the Employee class
+            name.SayName(); // outputs "Name: Example Student"
+            name.Quit("Argument passed"); //references the Quit() method inherited from the interface
+            iQuit.Quit(" Another Argument");
+            
+            Console.Read();
         }
     }
 }

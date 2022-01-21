@@ -12,7 +12,7 @@ namespace ConsoleApp1
         public string LastName { get; set; }
 
 
-        public abstract void SayName(); //what is the point of these? 
+        public abstract void SayName(); //what is the point of these? Need to research more
         
     }
 }
