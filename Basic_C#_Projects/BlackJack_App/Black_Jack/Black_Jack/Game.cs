@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Black_Jack
 {
-    public class Game
+    public abstract class Game
     {
-        public List<string> Players { get; set; }
+
+        public List<Player> Players { get; set; } //with lists, we still have to instantiate them even though this property us defined here
         public string Name { get; set; }
         public string Dealer { get; set; }
 
-        public void ListPlayers()
+        public abstract void Play();
+        public virtual void ListPlayers() //virtual methods exist inside abstract classes. They have implementation unlike abstract methods, but they can be overriden
         {
 
-            foreach(string player in Players)
+            foreach(Player player in Players)
             {
-                Console.WriteLine(player);
+                Console.WriteLine(player.Name);
             }
         }
 
