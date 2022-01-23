@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Employee: Person, IQuittable
     {
-        public override void SayName() // this is needed in this class if you are to inherit from class Person
+        public override void SayName() // this is needed in this class if you are to inherit from class Person, overide must exist to overide the implementation from Person. Otherwise you can add a "new"
         {
             Console.WriteLine($"Name: {FirstName} {LastName}");
         }
