@@ -53,7 +53,6 @@ namespace Enum_Assignment
             catch
             {
                 Console.WriteLine("That day of the week does not exist");
-
             }
             
         }
