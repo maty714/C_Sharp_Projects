@@ -1,0 +1,13 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.deps.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.runtimeconfig.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.runtimeconfig.dev.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\bin\Debug\netcoreapp3.1\Enum_Assignment.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.AssemblyInfoInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.AssemblyInfo.cs
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Enum Assignment\Enum_Assignment\Enum_Assignment\obj\Debug\netcoreapp3.1\Enum_Assignment.genruntimeconfig.cache
