@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\bin\Debug\Struct_Assignment.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\bin\Debug\Struct_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\bin\Debug\Struct_Assignment.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\obj\Debug\Struct_Assignment.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\obj\Debug\Struct_Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\obj\Debug\Struct_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Operator_Overloading\Struct_Assignment\Struct_Assignment\obj\Debug\Struct_Assignment.pdb
