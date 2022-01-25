@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\bin\Debug\Lambda_Assignment.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\bin\Debug\Lambda_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\bin\Debug\Lambda_Assignment.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\obj\Debug\Lambda_Assignment.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\obj\Debug\Lambda_Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\obj\Debug\Lambda_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Classes\Lambda_Assignment\Lambda_Assignment\Lambda_Assignment\obj\Debug\Lambda_Assignment.pdb
