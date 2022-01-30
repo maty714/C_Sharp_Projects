@@ -104,6 +104,30 @@ namespace Black_Jack
                     }
                 }
             }
+            dealer.isBusted = TwentyOneRules.isBusted(dealer.Hand);
+            dealer.stay = TwentyOneRules.shouldDealerStay(dealer.Hand);
+            while(!dealer.stay && !dealer.isBusted)
+            {
+                Console.Write("The dealer is hitting...");
+                dealer.Deal(dealer.Hand);
+                dealer.isBusted = TwentyOneRules.isBusted(dealer.Hand);   //this returns a true or false value
+                dealer.stay = TwentyOneRules.shouldDealerStay(dealer.Hand); //this returns a true or false value
+            }
+            if (dealer.stay)
+            {
+                Console.WriteLine("The dealer is staying...");
+            }
+            if (dealer.isBusted)
+            {
+               foreach(KeyValuePair<Player, int> entry in Bets)
+                {
+                    Console.WriteLine("{0} won {1}", entry.Key.Name, entry.Value);
+                    Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2);
+                } 
+               
+            }
+            
+
         }
         public override void ListPlayers() //this will override the ListPlayers in the base class Game. We then added functionality
         {
