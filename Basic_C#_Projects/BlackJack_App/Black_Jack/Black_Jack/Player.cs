@@ -22,7 +22,7 @@ namespace Black_Jack
         public bool isActivelyPlaying { get; set; }
         public bool stay { get; set; }
         
-        public bool Bet (int amount)
+        public bool Bet (int amount) //bet from TwentyOneGame is fed as the parameter
         {
             if (Balance - amount < 0)
             {

@@ -15,6 +15,10 @@ namespace Black_Jack
         //}
         public Suit Suit { get; set; } //this data type matches the enum below
         public Face Face { get; set; } //this data type matches the enum below
+        public override string ToString()
+        {
+            return string.Format("{0} of {1}", Face, Suit);
+        }
     }
 
     public enum Suit

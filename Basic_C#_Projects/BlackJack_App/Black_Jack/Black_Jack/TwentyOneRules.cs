@@ -22,7 +22,7 @@ namespace Black_Jack
             [Face.Queen] = 10,
             [Face.King] = 10,
             [Face.Ace] = 1
-         
+
         };
 
 
@@ -70,7 +70,29 @@ namespace Black_Jack
 
         public static bool shouldDealerStay(List<Card> Hand)
         {
+            int[] possibleHandValues = getAllPossibleHandValues(Hand);
+            foreach (int value in possibleHandValues)
+            {
+                if (value > 16 && value < 22)
+                {
+                    return true;
+                }
 
+            }
+            return false;
+        }
+
+        public static bool? compareHands(List<Card> PlayerHand, List<Card> DealerHand)
+        {
+            int[] playerResults = getAllPossibleHandValues(PlayerHand);
+            int[] dealerResults = getAllPossibleHandValues(DealerHand);
+
+            int playerScore = playerResults.Where(x => x < 22).Max();
+            int dealerScore = dealerResults.Where(x => x < 22).Max();
+
+            if (playerScore > dealerScore) return true;
+            else if (playerScore < dealerScore) return false;
+            else return null;
         }
     }
 }

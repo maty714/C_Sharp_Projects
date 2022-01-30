@@ -12,7 +12,7 @@ namespace Black_Jack
 
         public override void Play()
         {
-            dealer = new TwentyOneDealer();
+            dealer = new TwentyOneDealer(); //inherits twentyOneDealer Properties and Methods
             foreach (Player player in Players)
             {
                 player.Hand = new List<Card>();
@@ -33,7 +33,7 @@ namespace Black_Jack
                 }
                 Bets[player] = bet; //if the player is able to make the bet before the hand is dealt, we store it in a dictionary, so when it comes time to pay, we do it per what is in the dictionary
             }
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++) //we use two because there will only be two cards per hand
             {
                 Console.WriteLine("Dealing....");
                 foreach (Player player in Players)
@@ -122,11 +122,42 @@ namespace Black_Jack
                foreach(KeyValuePair<Player, int> entry in Bets)
                 {
                     Console.WriteLine("{0} won {1}", entry.Key.Name, entry.Value);
-                    Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2);
-                } 
-               
+                    Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2); //this lambda expression works as follows. Even though there is only one player, we loop through the dictionary and grab the player (this is where the .first() comes into play) then pay them back their bet that was taken before and multiply it by 2 since they won
+                    dealer.Balance = entry.Value;
+                }
+                return;  
             }
-            
+            foreach(Player player in Players)
+            {
+                bool? playerWon = TwentyOneRules.compareHands(player.Hand, dealer.Hand);
+
+                if (playerWon == null)
+                {
+                    Console.WriteLine("Push! No one wins.");
+                }
+                else if (playerWon == true)
+                {
+                    Console.WriteLine("Player wins {0}", Bets[player]);
+                    player.Balance += Bets[player];
+                    dealer.Balance -= Bets[player];
+                }
+                else
+                {
+                    Console.WriteLine("Dealer Wins..");
+                    player.Balance -= Bets[player];
+                    dealer.Balance += Bets[player];
+                }
+                Console.WriteLine("Would you like to play again? please enter yes or no ");
+                string answer = Console.ReadLine();
+                if(answer == "yes" || answer == "Yes")
+                {
+                    player.isActivelyPlaying = true;
+                }
+                else
+                {
+                    player.isActivelyPlaying = false;
+                }
+            }
 
         }
         public override void ListPlayers() //this will override the ListPlayers in the base class Game. We then added functionality
