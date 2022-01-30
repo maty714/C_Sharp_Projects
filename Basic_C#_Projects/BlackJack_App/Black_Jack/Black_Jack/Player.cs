@@ -8,10 +8,33 @@ namespace Black_Jack
 {
     public class Player
     {
-        public List<Card> cards { get; set; } //this is the players hand
+        public Player(string PlayerName, int beginningBalance)
+        {
+            Hand = new List<Card>();
+            Name = PlayerName;
+            Balance = beginningBalance;
+           
+        }
+        
+        public List<Card> Hand { get; set; } //this is the players hand
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
+        public bool stay { get; set; }
+        
+        public bool Bet (int amount)
+        {
+            if (Balance - amount < 0)
+            {
+                Console.WriteLine("You do not have enough to make a bet that size");
+                return false;
+            }
+            else
+            {
+                Balance -= amount;
+                return true;
+            }
+        }
 
         public static Game operator+ (Game game, Player player)
         {

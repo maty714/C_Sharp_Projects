@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Black_Jack
 {
-    class Deck
+    public class Deck
     {
         public Deck() //This CONSTRUCTOR will fill  the list "Cards" below and will be called in program.cs
         {
