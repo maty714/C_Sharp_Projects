@@ -21,6 +21,7 @@ namespace Black_Jack
             dealer.Hand = new List<Card>();
             dealer.stay = false;
             dealer.Deck = new Deck(); //this creates a new deck. Look at deck class for how that is made if you forget. We need this because we would then have a partial deck if we played again
+            dealer.Deck.shuffle();
             Console.WriteLine("Place your bet!");
 
             foreach(Player player in Players)
@@ -45,8 +46,9 @@ namespace Black_Jack
                         bool blackjack = TwentyOneRules.checkForBlackJack(player.Hand);
                         if (blackjack)
                         {
-                            Console.Write("You Win! {0} wins {1}", player.Name, Bets[player]);
-                            player.Balance += (Convert.ToInt32(Bets[player] * 1.5) + Bets[player]);
+                            int BlackJackWin = (Convert.ToInt32(Bets[player] * 1.5));
+                            Console.Write("You Win! {0} wins {1}, your balance is now {2}", player.Name, BlackJackWin, player.Balance);
+                            player.Balance += (Convert.ToInt32(Bets[player] * 1.5) + Bets[player]);                             
                             return;
                         }
                     }                
@@ -63,6 +65,7 @@ namespace Black_Jack
                         {
                             dealer.Balance += entry.Value;
                         }
+                        return;
                     }
                 }
             }
@@ -75,7 +78,7 @@ namespace Black_Jack
                     {
                         Console.WriteLine("{0}", Card.ToString());
                     }
-                    Console.WriteLine("/n/nHit or stay");
+                    Console.WriteLine("\n\nHit or stay");
                     string answer = Console.ReadLine().ToLower();
                     if (answer == "stay")
                     {
@@ -96,10 +99,12 @@ namespace Black_Jack
                         if (answer == "yes")
                         {
                             player.isActivelyPlaying = true;
+                            return;
                         }
                         else
                         {
                             player.isActivelyPlaying = false;
+                            return;
                         }
                     }
                 }
@@ -108,7 +113,7 @@ namespace Black_Jack
             dealer.stay = TwentyOneRules.shouldDealerStay(dealer.Hand);
             while(!dealer.stay && !dealer.isBusted)
             {
-                Console.Write("The dealer is hitting...");
+                Console.Write("The dealer is hitting... \n");
                 dealer.Deal(dealer.Hand);
                 dealer.isBusted = TwentyOneRules.isBusted(dealer.Hand);   //this returns a true or false value
                 dealer.stay = TwentyOneRules.shouldDealerStay(dealer.Hand); //this returns a true or false value
@@ -119,9 +124,9 @@ namespace Black_Jack
             }
             if (dealer.isBusted)
             {
-               foreach(KeyValuePair<Player, int> entry in Bets)
-                {
-                    Console.WriteLine("{0} won {1}", entry.Key.Name, entry.Value);
+               foreach(KeyValuePair<Player, int> entry in Bets) 
+                { 
+                    Console.WriteLine("Dealer Busted! {0} won {1}", entry.Key.Name, entry.Value); 
                     Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2); //this lambda expression works as follows. Even though there is only one player, we loop through the dictionary and grab the player (this is where the .first() comes into play) then pay them back their bet that was taken before and multiply it by 2 since they won
                     dealer.Balance = entry.Value;
                 }
@@ -137,25 +142,27 @@ namespace Black_Jack
                 }
                 else if (playerWon == true)
                 {
-                    Console.WriteLine("Player wins {0}", Bets[player]);
+                    Console.WriteLine("Player wins {0}, your balance is now {1}", Bets[player], player.Balance);
                     player.Balance += Bets[player];
-                    dealer.Balance -= Bets[player];
+                    //dealer.Balance -= Bets[player];
                 }
                 else
                 {
-                    Console.WriteLine("Dealer Wins..");
-                    player.Balance -= Bets[player];
-                    dealer.Balance += Bets[player];
+                    Console.WriteLine("Dealer Wins.. your balance is now {0} \n", player.Balance);
+                    //player.Balance -= Bets[player];
+                    dealer.Balance += Bets[player];                   
                 }
                 Console.WriteLine("Would you like to play again? please enter yes or no ");
                 string answer = Console.ReadLine();
                 if(answer == "yes" || answer == "Yes")
                 {
                     player.isActivelyPlaying = true;
+                    return;
                 }
                 else
                 {
                     player.isActivelyPlaying = false;
+                    return;
                 }
             }
 

@@ -47,9 +47,9 @@ namespace Black_Jack
             }
         }
 
-        public void shuffle(out int timesShuffled, int times = 1) //"int times = 1" is optional. If a parameter is passed, that parameter will overide this optional one
+        public void shuffle(int times = 1) //"int times = 1" is optional. If a parameter is passed, that parameter will overide this optional one
         {
-            timesShuffled = times;
+            
             for (int i = 0; i < times; i++)
             {
                 List<Card> Templist = new List<Card>(); //Creates a temp list to store shuffled deck into

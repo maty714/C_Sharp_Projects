@@ -15,8 +15,9 @@ namespace Black_Jack
             Balance = beginningBalance;
            
         }
-        
-        public List<Card> Hand { get; set; } //this is the players hand
+
+        private List<Card> _hand = new List<Card>(); //again this gets created as we need to instantiate the List<Card> property, otherwise it will return a null when called upon. Same as the List<Card> in class Game
+        public List<Card> Hand { get { return _hand; } set { _hand = value; } } //this is the players hand
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }

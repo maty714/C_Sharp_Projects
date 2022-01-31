@@ -17,6 +17,7 @@ namespace Black_Jack
             [Face.Six] = 6,
             [Face.Seven] = 7,
             [Face.Eight] = 8,
+            [Face.Nine] = 9,
             [Face.Ten] = 10,
             [Face.Jack] = 10,
             [Face.Queen] = 10,
