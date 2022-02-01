@@ -17,7 +17,7 @@ namespace Date_Time
             DateTime time = DateTime.Now.AddHours(num);
 
             Console.WriteLine("The current time is {0}", time_now);
-            Console.WriteLine("The current time in 2 hours is {0}", time);
+            Console.WriteLine("The current time in " +  num + " hours is {0}", time);
 
             Console.Read();
         }
