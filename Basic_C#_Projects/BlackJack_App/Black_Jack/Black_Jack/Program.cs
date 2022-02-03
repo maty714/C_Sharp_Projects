@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace Black_Jack
     {
         static void Main(string[] args)
         {
+           
+
             Console.WriteLine("Welcome to Casino de Matt. Let's start by telling me your name: ");
             string playerName = Console.ReadLine();
             Console.WriteLine("How much money did you bring today?");
@@ -22,6 +25,11 @@ namespace Black_Jack
             if (answer == "yes" || answer == "yeah" || answer == "ya")
             {
                 Player player = new Player(playerName, bank);
+                player.ID = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\BlackJack_App\Black_Jack\Log.txt", true))
+                {
+                    file.WriteLine(player.ID);
+                }
                 Game game = new TwentyOneGame();  //used to expose the overloaded methods
                 game += player; //What part of the game is this player being added to?
                 player.isActivelyPlaying = true;

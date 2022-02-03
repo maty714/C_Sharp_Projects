@@ -22,6 +22,7 @@ namespace Casino2
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
         public bool stay { get; set; }
+        public Guid ID { get; set; }
         
         public bool Bet (int amount) //bet from TwentyOneGame is fed as the parameter
         {

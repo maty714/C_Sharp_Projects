@@ -11,7 +11,8 @@ namespace Casino2.TwentyOne
     public class TwentyOneGame : Game, IWalkAway
     {
         public TwentyOneDealer dealer { get; set; }
-
+        public bool PlayerBlackJack { get; set; }
+        public bool DealerBlackJack { get; set; }
         public override void Play()
         {
             dealer = new TwentyOneDealer(); //inherits twentyOneDealer Properties and Methods
@@ -23,7 +24,7 @@ namespace Casino2.TwentyOne
             dealer.Hand = new List<Card>();
             dealer.stay = false;
             dealer.Deck = new Deck(); //this creates a new deck. Look at deck class for how that is made if you forget. We need this because we would then have a partial deck if we played again
-            dealer.Deck.shuffle();
+            dealer.Deck.shuffle(2);
             Console.WriteLine("Place your bet!");
 
             foreach(Player player in Players)
@@ -38,6 +39,40 @@ namespace Casino2.TwentyOne
             }
             for (int i = 0; i < 2; i++) //we use two because there will only be two cards per hand
             {
+                //Console.WriteLine("Dealing....");
+                //foreach (Player player in Players)
+                //{
+                //    Console.Write("Player {0}:  ", player.Name);
+                //    dealer.Deal(player.Hand);     //what is happening is that we are passing in a new list into the deal method of instance dealer of class twentyOneDealer, which inherits from class Dealer. This in turn adds the first card from the newly formed deck in line 23
+                //    if (i == 1)                     //think about indexing here. 1 is the technically the second card.
+                //    {
+                //        bool blackjack = TwentyOneRules.checkForBlackJack(player.Hand);
+                //        if (blackjack)
+                //        {
+                //            int BlackJackWin = (Convert.ToInt32(Bets[player] * 1.5));
+                //            player.Balance += (Convert.ToInt32(Bets[player] * 1.5) + Bets[player]);
+                //            Console.Write("You Win! {0} wins {1}, your balance is now {2}", player.Name, BlackJackWin, player.Balance);
+                //            return;
+                //        }
+                //    }
+                //}
+                //Console.Write("Dealer...");
+                //dealer.Deal(dealer.Hand);
+                //if (i == 1)
+                //{
+                //    bool blackjack = TwentyOneRules.checkForBlackJack(dealer.Hand);
+                //    if (blackjack)
+                //    {
+                //        Console.WriteLine("Dealer has blackjack!");
+                //        foreach (KeyValuePair<Player, int> entry in Bets)
+                //        {
+                //            dealer.Balance += entry.Value;
+                //        }
+                //        return;
+                //    }
+                //}
+
+                //start test
                 Console.WriteLine("Dealing....");
                 foreach (Player player in Players)
                 {
@@ -48,12 +83,9 @@ namespace Casino2.TwentyOne
                         bool blackjack = TwentyOneRules.checkForBlackJack(player.Hand);
                         if (blackjack)
                         {
-                            int BlackJackWin = (Convert.ToInt32(Bets[player] * 1.5));
-                            Console.Write("You Win! {0} wins {1}, your balance is now {2}", player.Name, BlackJackWin, player.Balance);
-                            player.Balance += (Convert.ToInt32(Bets[player] * 1.5) + Bets[player]);                             
-                            return;
+                            PlayerBlackJack = blackjack;
                         }
-                    }                
+                    }
                 }
                 Console.Write("Dealer...");
                 dealer.Deal(dealer.Hand);
@@ -62,15 +94,43 @@ namespace Casino2.TwentyOne
                     bool blackjack = TwentyOneRules.checkForBlackJack(dealer.Hand);
                     if (blackjack)
                     {
-                        Console.WriteLine("Dealer has blackjack!");
-                        foreach(KeyValuePair<Player, int> entry in Bets)
-                        {
-                            dealer.Balance += entry.Value;
-                        }
-                        return;
+                        bool DealerBlackJack = blackjack;
                     }
                 }
+                if(i == 1)
+                {
+                    foreach (Player player in Players)
+                    {
+                        if (PlayerBlackJack && DealerBlackJack)
+                        {
+                            Console.WriteLine("Push, no one wins..");
+                            return;
+                        }
+                        if (PlayerBlackJack)
+                        {
+                            int BlackJackWin = (Convert.ToInt32(Bets[player] * 1.5));
+                            player.Balance += (Convert.ToInt32(Bets[player] * 1.5) + Bets[player]);
+                            Console.Write("You Win! {0} wins {1}, your balance is now {2}", player.Name, BlackJackWin, player.Balance);
+                            return;
+                        }
+                        if (DealerBlackJack)
+                        {
+                            Console.WriteLine("Dealer has blackjack!");
+                            foreach (KeyValuePair<Player, int> entry in Bets)
+                            {
+                                dealer.Balance += entry.Value;
+                            }
+                            return;
+                        }
+                    }
+                
+                }
+                //end test
+
+
+
             }
+
             foreach (Player player in Players)
             {
                 while (!player.stay)
@@ -144,9 +204,9 @@ namespace Casino2.TwentyOne
                 }
                 else if (playerWon == true)
                 {
-                    Console.WriteLine("Player wins {0}, your balance is now {1}", Bets[player], player.Balance);
                     player.Balance += Bets[player];
-                    //dealer.Balance -= Bets[player];
+                    Console.WriteLine("Player wins {0}, your balance is now {1}", Bets[player], player.Balance);
+                    dealer.Balance -= Bets[player];
                 }
                 else
                 {
