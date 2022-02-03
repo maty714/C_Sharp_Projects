@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\bin\Debug\Constructor_Assignment.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\bin\Debug\Constructor_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\bin\Debug\Constructor_Assignment.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\obj\Debug\Constructor_Assignment.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\obj\Debug\Constructor_Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\obj\Debug\Constructor_Assignment.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Constructor\Constructor_Assignment\Constructor_Assignment\obj\Debug\Constructor_Assignment.pdb
