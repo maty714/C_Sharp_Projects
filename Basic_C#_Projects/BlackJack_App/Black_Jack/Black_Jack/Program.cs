@@ -57,7 +57,7 @@ namespace Black_Jack
                     }
                     catch (FraudException ex)
                     {
-                        Console.WriteLine("Security, kick this person out!");
+                        Console.WriteLine(ex.Message);
                         UpdateDBOExceptions(ex);
                         Console.ReadLine();
                         return;
