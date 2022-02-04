@@ -10,14 +10,30 @@ namespace Constructor_Assignment
     {
         static void Main(string[] args)
         {
-            const string name = "Matt";
-            var age = 2;
+            //const string name = "Matt";
+            //var age = 2;
 
-            Constructor_Chain constructor = new Constructor_Chain();
+            //Constructor_Chain constructor = new Constructor_Chain();
 
 
-            Console.WriteLine(name + " " + age);
+            //Console.WriteLine(name + " " + age);
+            //Console.Read();
+
+
+            Console.WriteLine("Please enter a number:");
+            string num = Console.ReadLine();
+            int theNum = 0;
+
+            if(int.TryParse(num, out theNum))
+            {
+                Console.WriteLine("This number can be converted: " + theNum);
+            }
             Console.Read();
+        
+        
         }
+
+
+
     }
 }

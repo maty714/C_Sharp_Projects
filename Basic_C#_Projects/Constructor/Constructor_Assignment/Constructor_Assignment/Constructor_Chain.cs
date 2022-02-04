@@ -15,7 +15,7 @@ namespace Constructor_Assignment
 
         public Constructor_Chain(int Age)
         {
-            Console.WriteLine("This number is from the constructor chain " + Age); 
+            Console.WriteLine("This number is from the constructor chain: " + Age); 
         }
 
     }
