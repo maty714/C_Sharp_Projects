@@ -25,11 +25,47 @@ namespace Casino2.TwentyOne
             dealer.stay = false;
             dealer.Deck = new Deck(); //this creates a new deck. Look at deck class for how that is made if you forget. We need this because we would then have a partial deck if we played again
             dealer.Deck.shuffle(2);
-            Console.WriteLine("Place your bet!");
+            
 
             foreach(Player player in Players)
             {
-                int bet = Convert.ToInt32(Console.ReadLine());
+                int bet = 0;
+                bool isValidAnswer = false;
+
+                while (!isValidAnswer)
+                {
+                    Console.WriteLine("Place your bet!");
+                    string amount = Console.ReadLine();
+                    isValidAnswer = int.TryParse(amount, out bet);
+                    if (!isValidAnswer)
+                    {
+                        Console.WriteLine("Please enter a number with digits and decimals only");
+                    }
+                }
+
+                if (bet < 0)
+                {
+                    throw new FraudException();
+                }
+
+
+                //while (bet <= 0)
+                //{
+                //    bool isValidAnswer = false;
+
+                //    while (!isValidAnswer)
+                //    {
+                //        Console.WriteLine("Please enter a number with digits and decimals only");
+                //        string amount = Console.ReadLine();
+                //        isValidAnswer = int.TryParse(amount, out bet);
+                //        if (!isValidAnswer)
+                //        {
+                //            Console.WriteLine("Please enter a positive number with digits and decimals only");
+                //        }
+                //    }
+                //}
+
+
                 bool successfullyBet = player.Bet(bet);   //calls the class Player method "bet" using the instance
                 if (!successfullyBet)                   //This is equivalent to saying "successfullyBet == false"
                 {
@@ -37,6 +73,8 @@ namespace Casino2.TwentyOne
                 }
                 Bets[player] = bet; //if the player is able to make the bet before the hand is dealt, we store it in a dictionary, so when it comes time to pay, we do it per what is in the dictionary
             }
+            
+            
             for (int i = 0; i < 2; i++) //we use two because there will only be two cards per hand
             {
                 //Console.WriteLine("Dealing....");

@@ -13,12 +13,25 @@ namespace Black_Jack
     {
         static void Main(string[] args)
         {
-           
+            bool isValidAnswer = false;
+            int bank = 0;
 
             Console.WriteLine("Welcome to Casino de Matt. Let's start by telling me your name: ");
             string playerName = Console.ReadLine();
-            Console.WriteLine("How much money did you bring today?");
-            int bank = Convert.ToInt32(Console.ReadLine());
+
+            while (!isValidAnswer)
+            {
+                Console.WriteLine("How much money did you bring today?");
+                string amount = Console.ReadLine();
+                isValidAnswer = int.TryParse(amount, out bank);
+                if (!isValidAnswer)
+                {
+                    Console.WriteLine("Please enter a number with digits and decimals only");
+                }
+                
+            }
+
+
             Console.WriteLine("Hello {0}, would you like to play Black Jack?", playerName);
             string answer = Console.ReadLine().ToLower();
 
@@ -35,7 +48,24 @@ namespace Black_Jack
                 player.isActivelyPlaying = true;
                 while (player.isActivelyPlaying && player.Balance > 0)
                 {
-                    game.Play();
+                    try 
+                    {
+
+                        game.Play();
+                    }
+                    catch (FraudException)
+                    {
+                        Console.WriteLine("Security, kick this person out!");
+                        Console.ReadLine();
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An error occured, please contact your administrator.");
+                        Console.ReadLine();
+                        return;
+                    }
+                    
                 }
                 game -= player;
                 Console.WriteLine("Thank you for playing");
