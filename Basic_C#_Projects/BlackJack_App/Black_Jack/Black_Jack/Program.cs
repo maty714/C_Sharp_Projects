@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -53,15 +55,17 @@ namespace Black_Jack
 
                         game.Play();
                     }
-                    catch (FraudException)
+                    catch (FraudException ex)
                     {
                         Console.WriteLine("Security, kick this person out!");
+                        UpdateDBOExceptions(ex);
                         Console.ReadLine();
                         return;
                     }
-                    catch (Exception)
+                    catch (Exception ex) //note, this exception can take a FraudException. This is another example of polymorphism
                     {
                         Console.WriteLine("An error occured, please contact your administrator.");
+                        UpdateDBOExceptions(ex);
                         Console.ReadLine();
                         return;
                     }
@@ -75,6 +79,32 @@ namespace Black_Jack
             Console.Read();
         }
 
+
+        private static void UpdateDBOExceptions(Exception ex)
+        {
+            string connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=TwentyOneGame;
+                                       Integrated Security=True;Connect Timeout=30;Encrypt=False;
+                                       TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            string queryString = @"INSERT INTO Exceptions (ExceptionType, ExceptionMessage, TimeStamp) VALUES
+                                (@ExceptionType, @ExceptionMessage, @TimeStamp)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add("@ExceptionType", SqlDbType.VarChar); //this is naming the data type "ExceptionType" as a varChar which is how we protect from SQL Injections
+                command.Parameters.Add("@ExceptionMessage", SqlDbType.VarChar);
+                command.Parameters.Add("@TimeStamp", SqlDbType.DateTime);
+
+                command.Parameters["@ExceptionType"].Value = ex.GetType().ToString(); //we use GetType because that is what we want to store here, we convert it to string as it is originally not
+                command.Parameters["@ExceptionMessage"].Value = ex.Message;
+                command.Parameters["@TimeStamp"].Value = DateTime.Now;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
        
     }
 }
