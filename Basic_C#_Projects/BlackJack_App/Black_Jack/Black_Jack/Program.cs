@@ -17,16 +17,33 @@ namespace Black_Jack
         {
             bool isValidAnswer = false;
             int bank = 0;
+            int guess = 0;
 
             Console.WriteLine("Welcome to Casino de Matt. Let's start by telling me your name: ");
             string playerName = Console.ReadLine();
 
             if (playerName.ToLower() == "admin")
             {
+                Console.WriteLine("Please enter your password:");
+                string password = Console.ReadLine();
                 
-                
+                while (password != "123")
+                {
+                    guess += 1;
+                    Console.WriteLine("That password is incorrect, please try again:");
+                    password = Console.ReadLine(); 
+
+                    if (guess == 3)
+                    {
+                        Console.WriteLine("Your account is locked, please contact your administrator");
+                        Console.Read();
+                        return;
+                    }
+                    
+                }
+
                 List<ExceptionEntity> Exceptions = ReadOnlyExceptions();
-                foreach(var exception in Exceptions)
+                foreach (var exception in Exceptions)
                 {
                     Console.Write(exception.Id + " | ");
                     Console.Write(exception.ExceptionType + " | ");
@@ -37,6 +54,8 @@ namespace Black_Jack
                 Console.Read();
                 return;
             }
+
+
 
             while (!isValidAnswer)
             {
