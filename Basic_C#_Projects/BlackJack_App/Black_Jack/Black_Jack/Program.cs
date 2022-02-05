@@ -21,6 +21,23 @@ namespace Black_Jack
             Console.WriteLine("Welcome to Casino de Matt. Let's start by telling me your name: ");
             string playerName = Console.ReadLine();
 
+            if (playerName.ToLower() == "admin")
+            {
+                
+                
+                List<ExceptionEntity> Exceptions = ReadOnlyException();
+                foreach(var exception in Exceptions)
+                {
+                    Console.Write(exception.Id + " | ");
+                    Console.Write(exception.ExceptionType + " | ");
+                    Console.Write(exception.ExceptionMessage + " | ");
+                    Console.Write(exception.TimeStamp + " | ");
+                    Console.WriteLine();
+                }
+                Console.Read();
+                return;
+            }
+
             while (!isValidAnswer)
             {
                 Console.WriteLine("How much money did you bring today?");
@@ -80,6 +97,12 @@ namespace Black_Jack
         }
 
 
+
+
+
+
+
+
         private static void UpdateDBOExceptions(Exception ex)
         {
             string connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=TwentyOneGame;
@@ -105,6 +128,15 @@ namespace Black_Jack
                 connection.Close();
             }
         }
+
+        private static List<ExceptionEntity> ReadExceptions() //this method queries all the database logs and returns them
+        {
+            string connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=TwentyOneGame;
+                                       Integrated Security=True;Connect Timeout=30;Encrypt=False;
+                                       TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        }
+            
        
     }
 }
