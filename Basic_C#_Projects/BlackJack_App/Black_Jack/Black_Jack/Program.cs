@@ -25,7 +25,7 @@ namespace Black_Jack
             {
                 
                 
-                List<ExceptionEntity> Exceptions = ReadOnlyException();
+                List<ExceptionEntity> Exceptions = ReadOnlyExceptions();
                 foreach(var exception in Exceptions)
                 {
                     Console.Write(exception.Id + " | ");
@@ -129,12 +129,35 @@ namespace Black_Jack
             }
         }
 
-        private static List<ExceptionEntity> ReadExceptions() //this method queries all the database logs and returns them
+        private static List<ExceptionEntity> ReadOnlyExceptions() //this method queries all the database logs and returns them
         {
             string connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=TwentyOneGame;
                                        Integrated Security=True;Connect Timeout=30;Encrypt=False;
                                        TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
+            string queryString = @"SELECT Id, ExceptionType, ExceptionMessage, TimeStamp FROM Exceptions";
+
+            List<ExceptionEntity> Exceptions = new List<ExceptionEntity>(); //list needs to be outside the using statement otherwise we cannot use it
+
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())                                //this loops through each object and reads it
+                {
+                    ExceptionEntity exception = new ExceptionEntity();
+                    exception.Id = Convert.ToInt32(reader["Id"]);
+                    exception.ExceptionType = reader["ExceptionType"].ToString();
+                    exception.ExceptionMessage = reader["ExceptionMessage"].ToString();
+                    exception.TimeStamp = Convert.ToDateTime(reader["TimeStamp"]);
+                    Exceptions.Add(exception);
+                }
+                connection.Close();
+            }
+
+
+            return Exceptions; //we are returning the list of objects here
         }
             
        
