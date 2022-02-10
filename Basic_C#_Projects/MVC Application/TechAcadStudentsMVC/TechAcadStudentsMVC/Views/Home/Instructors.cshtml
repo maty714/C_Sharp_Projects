@@ -1,0 +1,18 @@
+﻿@using TechAcadStudentsMVC.Models 
+@model List<Instructor>
+@{
+    // we are using the "using" statement to refer to the Instructor class without having to prefix it at the end every single time
+    
+    ViewBag.Title = "Instructors";
+}
+
+<h2>Instructors</h2>
+
+@{ 
+
+    foreach (Instructor instructor in Model)
+            {
+                <h4>@instructor.FirstName</h4>
+            }
+
+}
