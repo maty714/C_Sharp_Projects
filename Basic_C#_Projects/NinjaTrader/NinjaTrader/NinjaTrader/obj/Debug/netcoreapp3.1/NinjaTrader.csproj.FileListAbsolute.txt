@@ -1,0 +1,13 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.deps.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.runtimeconfig.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.runtimeconfig.dev.json
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\bin\Debug\netcoreapp3.1\NinjaTrader.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.AssemblyInfoInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.AssemblyInfo.cs
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NinjaTrader\NinjaTrader\NinjaTrader\obj\Debug\netcoreapp3.1\NinjaTrader.genruntimeconfig.cache
