@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewsLetter
+namespace NewsLetter.Models
 {
     using System;
     using System.Data.Entity;

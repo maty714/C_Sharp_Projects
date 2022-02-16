@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NewsLetter\NewsLetter\NewsLetter\Newsletter.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\NewsLetter\NewsLetter\NewsLetter\Models\Newsletter.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
