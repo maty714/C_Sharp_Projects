@@ -15,7 +15,7 @@ namespace NewsLetter.Controllers
         //Use this connection string if you decide to not use Entity Framework code
         // private readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Newsletter;Integrated Security=True; 
         //        Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";  //the private readonly helps protect the string
-
+        //
         public ActionResult Index()
         {
             return View();
@@ -44,7 +44,7 @@ namespace NewsLetter.Controllers
                     signup.LastName = lastName;
                     signup.EmailAddress = emailAddress;
 
-                    db.SignUps.Add(signup);
+                    db.SignUps.Add(signup); //this is where eveything we input is added, from here if you go to adminController, you will see how we set a variable to db.SignUps. This in turn will allow us to view the data through the admin view
                     db.SaveChanges(); //nothing will be saved to the database until we use this
                 }
 

@@ -7,19 +7,30 @@
             <h5 class="m-0">Sign-ups</h5>
         </div>
         <div class="card-body">
-            @foreach (var signUp in Model)
+            @foreach (var signUp in Model) //the FormMethod.Post below is used
             {
-                <div class="row">
-                    <div class="col">
-                        @signUp.FirstName
+                <!--The formMethod.Post is used whenever we update or add to a database. Get is used when grabbing from said database -->
+                using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+                {
+                    <input type="hidden" name="Id" value="@signUp.Id"/>
+                    <div class="row mb-3">
+                       <!--A note about the class "col", bootstrap has 12 columns, and will divide that by however many you use below, so each col below takes up three columns instead of one-->
+                        <div class="col-2">
+                            @signUp.FirstName
+                        </div>
+                        <div class="col">
+                            @signUp.LastName
+                        </div>
+                        <div class="col-4">
+                            @signUp.EmailAddress
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-danger btn-block">
+                                Unsubscribe
+                            </button>
+                        </div>
                     </div>
-                    <div class="col">
-                        @signUp.LastName
-                    </div>
-                    <div class="col">
-                        @signUp.EmailAddress
-                    </div>
-                </div>
+                }
             }
         </div>
     </div>
