@@ -49,7 +49,50 @@ namespace CarInsurance.Controllers
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
         {
             if (ModelState.IsValid)
-            {
+            {                
+                DateTime birthDate = DateTime.Parse(insuree.DateOfBirth.ToString());
+                DateTime checkDate = DateTime.Today;
+                int days = (checkDate - birthDate).Days;
+                int ticketCount = insuree.SpeedingTickets;
+                decimal quote = 50m;
+                string carModel = insuree.CarModel.ToUpper();
+
+                quote += (ticketCount * 10);
+
+                if (days < 6574)
+                {
+                    quote += 100m;
+                }
+                if (days >= 6939 && days <= 9131)
+                {
+                    quote += 50;
+                }
+                if (days > 9131)
+                {
+                    quote += 25;
+                }
+                if (insuree.CarYear < 2000 || insuree.CarYear > 2015)
+                {
+                    quote += 25m;
+                }
+                if (insuree.CarMake.ToUpper() == "PORSCHE")
+                {
+                    quote += 25m;
+                }
+                if (carModel.Contains("CARRERA")  && insuree.CarMake.ToUpper() == "PORSCHE")
+                {
+                    quote += 25;
+                }
+                if (insuree.DUI)
+                {
+                    quote += (quote * 1.25m);
+                }
+                if (insuree.CoverageType)
+                {
+                    quote += (quote * 1.50m);
+                }
+                
+                insuree.Quote = quote; 
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -62,7 +105,7 @@ namespace CarInsurance.Controllers
         public ActionResult Edit(int? id)
         {
             if (id == null)
-            {
+             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Insuree insuree = db.Insurees.Find(id);
@@ -115,6 +158,10 @@ namespace CarInsurance.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Admin()
+        {
+            return View();
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
