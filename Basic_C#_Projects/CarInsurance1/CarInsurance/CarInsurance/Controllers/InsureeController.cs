@@ -52,7 +52,8 @@ namespace CarInsurance.Controllers
             {                
                 DateTime birthDate = DateTime.Parse(insuree.DateOfBirth.ToString());
                 DateTime checkDate = DateTime.Now;
-                int days = (checkDate - birthDate).Days;
+                int test = DateTime.Today.Year;
+                int check = test - birthDate.Year;
               
                 int ticketCount = insuree.SpeedingTickets;
                 decimal quote = 50m;
@@ -60,15 +61,15 @@ namespace CarInsurance.Controllers
 
                 quote += (ticketCount * 10);
 
-                if (days < 6939)
+                if (check < 18)
                 {
                     quote += 100m;
                 }
-                if (days >= 6939 && days <= 9131)
+                if (check >= 19 && check <= 25)
                 {
                     quote += 50;
                 }
-                if (days > 9131)
+                if (check > 25)
                 {
                     quote += 25;
                 }
