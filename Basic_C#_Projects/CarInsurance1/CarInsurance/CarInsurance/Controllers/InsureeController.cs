@@ -52,8 +52,7 @@ namespace CarInsurance.Controllers
             {                
                 DateTime birthDate = DateTime.Parse(insuree.DateOfBirth.ToString());
                 DateTime checkDate = DateTime.Now;
-                int test = DateTime.Today.Year;
-                int check = test - birthDate.Year;
+                int check = DateTime.Today.Year - birthDate.Year;
               
                 int ticketCount = insuree.SpeedingTickets;
                 decimal quote = 50m;
