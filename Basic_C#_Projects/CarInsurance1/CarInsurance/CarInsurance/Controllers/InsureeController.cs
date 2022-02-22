@@ -51,15 +51,16 @@ namespace CarInsurance.Controllers
             if (ModelState.IsValid)
             {                
                 DateTime birthDate = DateTime.Parse(insuree.DateOfBirth.ToString());
-                DateTime checkDate = DateTime.Today;
+                DateTime checkDate = DateTime.Now;
                 int days = (checkDate - birthDate).Days;
+              
                 int ticketCount = insuree.SpeedingTickets;
                 decimal quote = 50m;
                 string carModel = insuree.CarModel.ToUpper();
 
                 quote += (ticketCount * 10);
 
-                if (days < 6574)
+                if (days < 6939)
                 {
                     quote += 100m;
                 }
@@ -85,11 +86,11 @@ namespace CarInsurance.Controllers
                 }
                 if (insuree.DUI)
                 {
-                    quote += (quote * 1.25m);
+                    quote *= 1.25m;
                 }
                 if (insuree.CoverageType)
                 {
-                    quote += (quote * 1.50m);
+                    quote *= 1.50m;                    
                 }
                 
                 insuree.Quote = quote; 
