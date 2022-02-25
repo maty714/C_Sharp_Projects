@@ -5,7 +5,7 @@ Will house any and all C# projects created
 **Projects:**
 
 - [Car Insurance](https://github.com/maty714/C_Sharp_Projects/tree/main/Basic_C%23_Projects/CarInsurance1/CarInsurance)
-- [BlackJack](https://github.com/maty714/C_Sharp_Projects/tree/main/Basic_C%23_Projects/BlackJack_App/Black_Jack)
+- [BlackJack Game](https://github.com/maty714/C_Sharp_Projects/tree/main/Basic_C%23_Projects/BlackJack_App/Black_Jack)
 - [News Letter App](https://github.com/maty714/C_Sharp_Projects/tree/main/Basic_C%23_Projects/NewsLetter/NewsLetter)
 
 
