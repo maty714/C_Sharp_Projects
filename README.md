@@ -4,9 +4,9 @@ Will house any and all C# projects created
 
 **Projects:**
 
--Car Insurance
--BlackJack
--News Letter App
+- Car Insurance
+- BlackJack
+- News Letter App
 
 
 **Car Insurance App**
