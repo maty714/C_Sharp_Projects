@@ -26,6 +26,7 @@
     <EntitySetMapping Name="Customer_Account">
       <EntityTypeMapping TypeName="BankDataModel.Customer_Account">
         <MappingFragment StoreEntitySet="Customer_Account">
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />

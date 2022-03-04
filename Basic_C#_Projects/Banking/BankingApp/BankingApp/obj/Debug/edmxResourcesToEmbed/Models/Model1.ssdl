@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BankDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'BankData.dbo.Customer_Account' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Customer_Account">
     <Key>
       <PropertyRef Name="Id" />
@@ -9,6 +7,7 @@ warning 6002: The table/view 'BankData.dbo.Customer_Account' does not have a pri
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Balance" Type="money" />
   </EntityType>
   <EntityType Name="Customer_Info">
     <Key>
@@ -30,18 +29,6 @@ warning 6002: The table/view 'BankData.dbo.Customer_Account' does not have a pri
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <Association Name="FK_Customer_Account_Customer_Info">
-    <End Role="Customer_Info" Type="Self.Customer_Info" Multiplicity="1" />
-    <End Role="Customer_Account" Type="Self.Customer_Account" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Customer_Info">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Customer_Account">
-        <PropertyRef Name="Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -74,18 +61,8 @@ warning 6002: The table/view 'BankData.dbo.Customer_Account' does not have a pri
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="BankDataModelStoreContainer">
+    <EntitySet Name="Customer_Account" EntityType="Self.Customer_Account" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customer_Info" EntityType="Self.Customer_Info" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Customer_Account" EntityType="Self.Customer_Account" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Customer_Account].[Id] AS [Id], 
-    [Customer_Account].[FirstName] AS [FirstName], 
-    [Customer_Account].[LastName] AS [LastName]
-    FROM [dbo].[Customer_Account] AS [Customer_Account]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK_Customer_Account_Customer_Info" Association="Self.FK_Customer_Account_Customer_Info">
-      <End Role="Customer_Info" EntitySet="Customer_Info" />
-      <End Role="Customer_Account" EntitySet="Customer_Account" />
-    </AssociationSet>
   </EntityContainer>
 </Schema>
