@@ -20,34 +20,35 @@ namespace BankingApp.Controllers
 
             return View();
         }
-
-        public ActionResult CreateAnAccount(string firstName, string lastName, string emailAddress, string password)
+        
+        [HttpPost]
+        public ActionResult Create(string firstName, string lastName, string emailAddress, string password)
         {
 
-            //if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(password))
-            //{
-            //    return View("~/Views/Shared/Error.cshtml");
-            //}
-            //else
-
-
-
-            using (BankDataEntities db = new BankDataEntities())
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(password))
             {
-                var customer = new Customer_Info();
-                customer.FirstName = firstName;
-                customer.LastName = lastName;
-                customer.EmailAddress = emailAddress;
-                customer.Password = password;
-
-                db.Customer_Info.Add(customer); //this is where eveything we input is added, from here if you go to adminController, you will see how we set a variable to db.SignUps. This in turn will allow us to view the data through the admin view
-                db.SaveChanges(); //nothing will be saved to the database until we use this
+                return View("~/Views/Shared/Error.cshtml");
             }
+            else
+            {
 
 
 
+                using (BankDataEntities db = new BankDataEntities())
+                {
+                    var customer = new Customer_Info();
+                    customer.FirstName = firstName;
+                    customer.LastName = lastName;
+                    customer.EmailAddress = emailAddress;
+                    customer.Password = password;
 
-            return View();
+                    db.Customer_Info.Add(customer); //this is where eveything we input is added, from here if you go to adminController, you will see how we set a variable to db.SignUps. This in turn will allow us to view the data through the admin view
+                    db.SaveChanges(); //nothing will be saved to the database until we use this
+                }
+
+
+                return View();
+            }         
         }
     }
 }
