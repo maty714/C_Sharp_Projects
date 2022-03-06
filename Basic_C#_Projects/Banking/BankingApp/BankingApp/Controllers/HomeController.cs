@@ -21,6 +21,13 @@ namespace BankingApp.Controllers
             return View();
         }
         
+
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(string firstName, string lastName, string emailAddress, string password)
         {
@@ -48,7 +55,7 @@ namespace BankingApp.Controllers
 
 
                 return View();
-            }         
+            }           
         }
     }
 }
