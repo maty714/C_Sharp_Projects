@@ -44,7 +44,8 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Welcome to (Insert name), you are one step away from joining our family</h2>
-                        <a class="btn btn-primary" href="#about">Lets Begin</a>
+                        <a>@Html.ActionLink("Let's Begin", "Create", "Home", new { area = "" }, new { @class = "btn btn-primary" })</a>
+                        <!--<a class="btn btn-primary" href="~/Views/Home/Create.cshtml">Lets Begin</a>-->
                     </div>
                 </div>
             </div>
