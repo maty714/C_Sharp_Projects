@@ -170,6 +170,8 @@
     <Content Include="Content\assets\img\bg-signup.jpg" />
     <Content Include="Content\assets\img\demo-image-01.jpg" />
     <Content Include="Content\assets\img\demo-image-02.jpg" />
+    <Content Include="Content\assets\img\desertStar.jpg" />
+    <Content Include="Content\assets\img\dessert.jpg" />
     <Content Include="Content\assets\img\ipad.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
