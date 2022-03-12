@@ -67,6 +67,15 @@
                                 </div><br>
                                 <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
                             }
+
+                            @if(ViewBag.userNameExists = "yes")
+            {
+                        <script>
+                            function myFunction() {
+                                alert("I am an alert box!");
+                            }
+                        </script>
+            }
                         </div>
                     </div>
                 </div>
