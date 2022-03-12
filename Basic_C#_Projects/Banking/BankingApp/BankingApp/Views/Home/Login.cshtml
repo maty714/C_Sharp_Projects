@@ -49,14 +49,23 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="~/Content/assets/img/desertStar.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <div class="mb-3">
-                                
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email Address">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
-                            </div>
+                            <h4>Login</h4>
+                            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                            {                        
+                                <div>
+                                    <div class="mb-3">
+                                        <input class="form-control" name="emailAddress" type="text" placeholder="Enter email address..." aria-label="Enter email address..." />
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control" name="password" type="password" placeholder="Enter your password..." aria-label="Enter your password..." />
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <br>
+                                    <button type="button" class="btn btn-outline-success">Submit</button>
+                                    <button type="button" class="btn btn-outline-success">Create an account</button> <!--Need to link-->
+                                </div>                          
+                            }
                         </div>
                     </div>
                 </div>

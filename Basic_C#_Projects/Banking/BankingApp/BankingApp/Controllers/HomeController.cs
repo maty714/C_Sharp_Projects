@@ -14,7 +14,7 @@ namespace BankingApp.Controllers
             return View();
         }
 
-        public ActionResult Login()
+        public ActionResult Login(string emailAddress, string password)
         {
             ViewBag.Message = "Your application description page.";
 
@@ -29,10 +29,10 @@ namespace BankingApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(string firstName, string lastName, string emailAddress, string password)
+        public ActionResult Create(string firstName, string lastName, string emailAddress, string userName, string password)
         {
 
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
             {
                 return View("~/Views/Shared/Error.cshtml");
             }
@@ -47,6 +47,7 @@ namespace BankingApp.Controllers
                     customer.FirstName = firstName;
                     customer.LastName = lastName;
                     customer.EmailAddress = emailAddress;
+                    customer.userName = userName;
                     customer.Password = password;
 
                     db.Customer_Info.Add(customer); //this is where eveything we input is added, from here if you go to adminController, you will see how we set a variable to db.SignUps. This in turn will allow us to view the data through the admin view
