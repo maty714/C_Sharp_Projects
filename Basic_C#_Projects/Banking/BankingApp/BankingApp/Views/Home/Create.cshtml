@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -48,34 +52,33 @@
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
                         <div class="card-body">
+                            <p class="text-warning border-white">
+                                @ViewBag.userNameError
+                            </p>
                             @using (Html.BeginForm("Create", "Home", FormMethod.Post))
                             {
                                 <div class="row ">
                                     <div class="col"><input class="form-control" name="firstName" type="text" placeholder="Enter first name..." aria-label="Enter first name..." /></div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <div class="row">
                                     <div class="col"><input class="form-control" name="lastName" type="text" placeholder="Enter last name..." aria-label="Enter last name..." /></div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <div class="row">
                                     <div class="col"><input class="form-control" name="emailAddress" type="text" placeholder="Enter email address..." aria-label="Enter email address..." /></div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <div class="row">
                                     <div class="col"><input class="form-control" name="userName" type="text" placeholder="Pick a username..." aria-label="Pick a username..." /></div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <div class="row">
                                     <div class="col"><input class="form-control" name="password" type="password" placeholder="Choose a password..." aria-label="Choose a password..." /></div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
                             }
-
-                            @if(ViewBag.userNameExists = "yes")
-            {
-                        <script>
-                            function myFunction() {
-                                alert("I am an alert box!");
-                            }
-                        </script>
-            }
                         </div>
                     </div>
                 </div>
@@ -117,6 +120,42 @@
                 </div>
             </div>
         </section>
+
+        @*<div id="myModalSuccess" class="modal fade glyphicon-text-width:30%" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Information</h2>
+                        
+                    </div>
+                    <div id="MyModelSuccessAlertBody" class="modal-body alert-success">
+                        This is a modal body.
+                    </div>
+
+                    <div class="modal-footer">&nbsp;
+                     <button type="button" class="close" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+        @*@section Scripts{
+           <script type="text/javascript">
+               function openSuccessModal(strMessage) {
+                   var myDiv = document.getElementById("MyModalSuccessAlertBody");
+                   myDiv.innerHTML = strMessage;
+                   $("#myModalSuccess").modal('show');
+               }
+
+               $(document).ready(function (){
+                   var msg = "@TempData["SuccessMessage"]";
+                   if (msg)
+                       openSuccessModal(msg);
+               });
+            </script>            
+           
+            }*@
+
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2021</div></footer>
         <!-- Bootstrap core JS-->
@@ -128,6 +167,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     </div>
 </body>
 </html>

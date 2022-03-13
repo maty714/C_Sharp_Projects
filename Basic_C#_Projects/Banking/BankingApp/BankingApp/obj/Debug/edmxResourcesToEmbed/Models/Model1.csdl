@@ -27,7 +27,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Customer_Info" Relationship="Self.FK_Customer_Account_Customer_Info" FromRole="Customer_Account" ToRole="Customer_Info" />
     <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
