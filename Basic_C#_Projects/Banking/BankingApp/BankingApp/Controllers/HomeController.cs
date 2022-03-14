@@ -45,6 +45,8 @@ namespace BankingApp.Controllers
                 {
 
                     string errMessage = "This username is already taken";
+                    
+                    //adds customer to Customer_Info table
                     var customer = new Customer_Info();
                     customer.FirstName = firstName;
                     customer.LastName = lastName;
@@ -52,12 +54,21 @@ namespace BankingApp.Controllers
                     customer.userName = userName;
                     customer.Password = password;
 
+                    //adds customer info to account table
+                    var account = new Customer_Account();
+                    account.Id = customer.Id;
+                    account.FirstName = firstName;
+                    account.LastName = lastName;
+
+
 
                     var searchData = db.Customer_Info.Any(x => x.userName == userName);
                     if (!searchData)
                     {
-                        db.Customer_Info.Add(customer); //this is where eveything we input is added, from here if you go to adminController, you will see how we set a variable to db.SignUps. This in turn will allow us to view the data through the admin view
-                        db.SaveChanges(); //nothing will be saved to the database until we use this
+                        db.Customer_Info.Add(customer); 
+                        db.Customer_Account.Add(account);
+                        db.SaveChanges();
+
                         return View("~/Views/Home/Login.cshtml");
                     }
                     else
@@ -69,7 +80,9 @@ namespace BankingApp.Controllers
 
 
                 return View("~/Views/Home/Create.cshtml");
-            }           
+            }  
+            
+
         }
     }
 }
