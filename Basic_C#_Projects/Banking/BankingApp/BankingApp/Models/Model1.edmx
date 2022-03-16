@@ -35,6 +35,18 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <Association Name="FK__Customer_Acc__Id__18EBB532">
+          <End Role="Customer_Info" Type="Self.Customer_Info" Multiplicity="1" />
+          <End Role="Customer_Account" Type="Self.Customer_Account" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Customer_Info">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer_Account">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -70,6 +82,10 @@
           <EntitySet Name="Customer_Account" EntityType="Self.Customer_Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer_Info" EntityType="Self.Customer_Info" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Customer_Acc__Id__18EBB532" Association="Self.FK__Customer_Acc__Id__18EBB532">
+            <End Role="Customer_Info" EntitySet="Customer_Info" />
+            <End Role="Customer_Account" EntitySet="Customer_Account" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->

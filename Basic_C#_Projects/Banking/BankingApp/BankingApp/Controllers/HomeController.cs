@@ -14,9 +14,47 @@ namespace BankingApp.Controllers
             return View();
         }
 
-        public ActionResult Login(string emailAddress, string password)
+        public ActionResult Login()
         {
             ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string userName, string password)
+        {
+
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            {
+                return View("~/Views/Shared/Error.cshtml");
+            }
+            else
+            {
+                
+                using (BankDataEntities db = new BankDataEntities())
+                {
+                    var customer = new Customer_Info();
+                    string searchUser = db.Customer_Info.Where(x => x.userName == userName).ToString();
+                    string searchPassword = db.Customer_Info.Where(x => x.userName == password).ToString();
+
+
+                    if (searchUser == userName && searchPassword == password)
+                    {
+                        var account = new Customer_Account();
+                        var firstName = account.FirstName;
+                        var lastName = account.LastName;
+
+
+
+                         
+                    }
+                }
+                
+
+
+
+            }
 
             return View();
         }
