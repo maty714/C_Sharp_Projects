@@ -1,4 +1,5 @@
 ﻿using BankingApp.Models;
+using BankingApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,13 +42,18 @@ namespace BankingApp.Controllers
 
                     if (searchUser == userName && searchPassword == password)
                     {
-                        var account = new Customer_Account();
-                        var firstName = account.FirstName;
-                        var lastName = account.LastName;
+                        var users = (from c in db.Customer_Account
+                                    where c.userName == userName
+                                    select c ).ToList();
 
-
-
-                         
+                        var userVM = new List<accountVM>();
+                        foreach (var user in users)
+                        {
+                            var accountVM = new accountVM();
+                            accountVM.firstName = user.FirstName;
+                            accountVM.lastName = user.LastName;
+                        }
+                        
                     }
                 }
                 
@@ -97,7 +103,8 @@ namespace BankingApp.Controllers
                     account.Id = customer.Id;
                     account.FirstName = firstName;
                     account.LastName = lastName;
-
+                    account.userName = userName;
+                    
 
 
                     var searchData = db.Customer_Info.Any(x => x.userName == userName);
