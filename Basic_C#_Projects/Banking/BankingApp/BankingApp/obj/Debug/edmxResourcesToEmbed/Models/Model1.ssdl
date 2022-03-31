@@ -8,6 +8,7 @@
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
     <Property Name="Balance" Type="money" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Customer_Info">
     <Key>

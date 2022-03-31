@@ -31,6 +31,7 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Customer_Info" Relationship="Self.FK_Customer_Account_Customer_Info" FromRole="Customer_Account" ToRole="Customer_Info" />
     <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Customer_Account_Customer_Info">
     <End Role="Customer_Info" Type="Self.Customer_Info" Multiplicity="1" />
