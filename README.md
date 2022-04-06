@@ -20,3 +20,9 @@ This project mimics a blackjack game in which a user can play blackjack against 
 **News Letter App:**
 
 This project is an MVC Web Application using Microsoft Server Management Studio which allows a user to sign up for news letters. It also consists of an admin page which can be used to take users off of the list if they wish.
+
+**Banking App:**
+
+This project is an MVC Web Application using Microsoft Server Managemnet Studio which allows users to create a bank account, and deposit money.
+
+NOTE* This project is still under construction!
