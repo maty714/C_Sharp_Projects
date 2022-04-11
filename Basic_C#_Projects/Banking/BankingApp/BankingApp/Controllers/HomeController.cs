@@ -36,12 +36,14 @@ namespace BankingApp.Controllers
                 using (BankDataEntities db = new BankDataEntities())
                 {
                     var customer = new Customer_Info();
-                    string searchUser = db.Customer_Info.Where(x => x.userName == userName).ToString();
-                    string searchPassword = db.Customer_Info.Where(x => x.userName == password).ToString();
+                    var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.userName).FirstOrDefault();
+                    var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Password).FirstOrDefault();
 
 
                     if (searchUser == userName && searchPassword == password)
                     {
+                        
+                        //Creates a view modal to be used
                         var users = (from c in db.Customer_Account
                                     where c.userName == userName
                                     select c ).ToList();
@@ -53,7 +55,7 @@ namespace BankingApp.Controllers
                             accountVM.firstName = user.FirstName;
                             accountVM.lastName = user.LastName;
                         }
-                        
+                        return View("~/Content_User/index.html");
                     }
                 }
                 
