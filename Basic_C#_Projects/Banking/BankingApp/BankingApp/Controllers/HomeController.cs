@@ -35,6 +35,7 @@ namespace BankingApp.Controllers
                 
                 using (BankDataEntities db = new BankDataEntities())
                 {
+                    //takes input from login
                     var customer = new Customer_Info();
                     var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.userName).FirstOrDefault();
                     var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Password).FirstOrDefault();
