@@ -7,7 +7,7 @@
       <Diagram DiagramId="e2c0b92d5a6e41388979fecc30f5adb7" Name="Diagram1">
         <EntityTypeShape EntityType="BankDataModel.Customer_Info" Width="1.75" PointX="0.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BankDataModel.sysdiagram" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BankDataModel.Customer_Account" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankDataModel.Customer_Account" Width="1.5" PointX="3.125" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="BankDataModel.FK_Customer_Account_Customer_Info" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
