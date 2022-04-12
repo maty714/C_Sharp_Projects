@@ -200,7 +200,7 @@
     <Content Include="Content_User\img\undraw_profile_2.svg" />
     <Content Include="Content_User\img\undraw_profile_3.svg" />
     <Content Include="Content_User\img\undraw_rocket.svg" />
-    <Content Include="Content_User\index.html" />
+    <None Include="Views\Home\UserPage.cshtml" />
     <Content Include="Content_User\js\demo\chart-area-demo.js" />
     <Content Include="Content_User\js\demo\chart-bar-demo.js" />
     <Content Include="Content_User\js\demo\chart-pie-demo.js" />

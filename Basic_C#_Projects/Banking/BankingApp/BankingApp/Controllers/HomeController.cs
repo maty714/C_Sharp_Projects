@@ -56,13 +56,9 @@ namespace BankingApp.Controllers
                             accountVM.firstName = user.FirstName;
                             accountVM.lastName = user.LastName;
                         }
-                        return View("~/Content_User/index.html");
+                        return View("~/Views/Home/UserPage.cshtml");
                     }
                 }
-                
-
-
-
             }
 
             return View();

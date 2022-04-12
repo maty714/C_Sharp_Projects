@@ -51,7 +51,7 @@
                         <div class="featured-text text-center text-lg-left">
                             <h4>Login</h4>
                             @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-                            {                        
+                            {
                                 <div>
                                     <div class="mb-3">
                                         <input class="form-control" name="userName" type="text" placeholder="Enter your username..." aria-label="Enter your username..." />
@@ -63,9 +63,10 @@
                                 <div class="d-grid gap-2">
                                     <br>
                                     <button type="submit" class="btn btn-outline-success">Submit</button> <!--Need to link-->
-                                    <button type="button" class="btn btn-outline-success">Create an account</button> <!--Need to link-->
-                                </div>                          
+
+                                </div>
                             }
+                            <button type="button" class="btn btn-outline-success">Create an account</button> <!--Need to link-->
                         </div>
                     </div>
                 </div>
