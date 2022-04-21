@@ -45,21 +45,24 @@ namespace BankingApp.Controllers
                         var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.Id).FirstOrDefault();
                         var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Id).FirstOrDefault();
                         var userID = db.Customer_Info.Where(x => x.Password == password).Where(x => x.userName == userName).Select(x => x.Id).First();
-                      
+
                         //Creates a view modal to b
-                        var users = (from c in db.Customer_Account
-                                    where c.userName == userName
+                        if (userID != 0) 
+                        { 
+                            
+                            var users = (from c in db.Customer_Account
+                                    where c.Id == userID
                                     select c ).ToList();
 
-                        var userVM = new List<accountVM>();
-                        foreach (var user in users)
-                        {
-                            var accountVM = new accountVM();
-                            accountVM.firstName = user.FirstName;
-                            accountVM.lastName = user.LastName;
+                            var userVM = new List<accountVM>();
+                            foreach (var user in users)
+                            {
+                                var accountVM = new accountVM();
+                                accountVM.firstName = user.FirstName;
+                                accountVM.lastName = user.LastName;
+                            }
+                            return View("~/Views/Home/userPage.cshtml");
                         }
-                        return View("~/Views/Home/userPage.cshtml");
-                    
                     }
                 }
 
@@ -135,6 +138,12 @@ namespace BankingApp.Controllers
             }  
             
 
+        }
+
+
+        public ActionResult userPage()
+        {
+            return View();
         }
     }
 }
