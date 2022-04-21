@@ -50,6 +50,9 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Login</h4>
+                            <p class="text-warning border-white">
+                                @ViewBag.loginError
+                            </p>
                             @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                             {
                                 <div>

@@ -27,6 +27,8 @@ namespace BankingApp.Controllers
         public ActionResult Login(string userName, string password)
         {
 
+            string loginError = "Invalid Username or Password";
+
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
             {
                 return View("~/Views/Shared/Error.cshtml");
@@ -34,18 +36,20 @@ namespace BankingApp.Controllers
             else
             {
                 
+                try
+                { 
                 using (BankDataEntities db = new BankDataEntities())
                 {
                     //takes input from login
                     var customer = new Customer_Info();
-                    var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.userName).FirstOrDefault();
-                    var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Password).FirstOrDefault();
+                    var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.Id).FirstOrDefault();
+                    var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Id).FirstOrDefault();
+                    var userID = db.Customer_Info.Where(x => x.Password == password).Where(x => x.userName == userName).Select(x => x.Id).First();
 
-
-                    if (searchUser == userName && searchPassword == password)
+                        if (searchUser == searchPassword)
                     {
                         
-                        //Creates a view modal to be used
+                        //Creates a view modal to b
                         var users = (from c in db.Customer_Account
                                     where c.userName == userName
                                     select c ).ToList();
@@ -59,6 +63,12 @@ namespace BankingApp.Controllers
                         }
                         return View("~/Views/Home/userPage.cshtml");
                     }
+                }
+                }
+
+                catch (Exception)
+                {
+                    ViewBag.loginError = loginError;
                 }
             }
 
