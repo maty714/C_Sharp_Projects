@@ -116,7 +116,7 @@ namespace BankingApp.Controllers
                     account.userName = userName;
                     
 
-
+                    //Checks if a username already exists
                     var searchData = db.Customer_Info.Any(x => x.userName == userName);
                     if (!searchData)
                     {
