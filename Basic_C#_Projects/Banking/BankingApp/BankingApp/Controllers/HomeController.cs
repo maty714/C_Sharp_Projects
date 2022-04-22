@@ -42,8 +42,8 @@ namespace BankingApp.Controllers
                     {
                         //takes input from login
                         var customer = new Customer_Info();
-                        var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.Id).FirstOrDefault();
-                        var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Id).FirstOrDefault();
+                        //var searchUser = db.Customer_Info.Where(x => x.userName == userName).Select(x => x.Id).FirstOrDefault();
+                        //var searchPassword = db.Customer_Info.Where(x => x.Password == password).Select(x => x.Id).FirstOrDefault();
                         var userID = db.Customer_Info.Where(x => x.Password == password).Where(x => x.userName == userName).Select(x => x.Id).First();
 
                         //Creates a view modal to b
@@ -51,8 +51,8 @@ namespace BankingApp.Controllers
                         { 
                             
                             var users = (from c in db.Customer_Account
-                                    where c.Id == userID
-                                    select c ).ToList();
+                                where c.Id == userID
+                                select c ).ToList();
 
                             var userVM = new List<accountVM>();
                             foreach (var user in users)
