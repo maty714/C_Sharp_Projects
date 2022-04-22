@@ -60,8 +60,9 @@ namespace BankingApp.Controllers
                                 var accountVM = new accountVM();
                                 accountVM.firstName = user.FirstName;
                                 accountVM.lastName = user.LastName;
+                                userVM.Add(accountVM);
                             }
-                            return View("~/Views/Home/userPage.cshtml");
+                            return View("~/Views/Home/userPage.cshtml",userVM);
                         }
                     }
                 }
