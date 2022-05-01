@@ -184,7 +184,7 @@ namespace Banking.Controllers
                     return View("Info");
                     //return RedirectToAction("Index", "Home");
 
-                    return RedirectToAction("Index", "Home");
+                    
                 }
                 AddErrors(result);
             }
