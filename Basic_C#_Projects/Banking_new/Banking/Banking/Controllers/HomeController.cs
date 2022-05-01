@@ -20,6 +20,8 @@ namespace Banking.Controllers
             return View();
         }
 
+
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -27,4 +29,3 @@ namespace Banking.Controllers
             return View();
         }
     }
-}
