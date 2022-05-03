@@ -11,15 +11,58 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Banking.Models;
+using System.Configuration;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Diagnostics;
+using System.Net;
 
 namespace Banking
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            await configSendGridasync(message);
+        }
+        private async Task configSendGridasync(IdentityMessage message)
+        {
+            //var myMessage = new SendGridMessage();
+            //myMessage.AddTo(message.Destination);
+            //myMessage.From = new EmailAddress("Joe@contoso.com", "Joe S.");
+            //myMessage.Subject = message.Subject;
+            //myMessage.PlainTextContent = message.Body;
+            //myMessage.HtmlContent = message.Body;
+
+            //var credentials = new NetworkCredential(
+            //           ConfigurationManager.AppSettings["mailAccount"],
+            //           ConfigurationManager.AppSettings["mailPassword"]
+            //           );
+
+            //// Create a Web transport for sending email.
+            //var transportWeb = new Web(credentials);
+
+
+            var apiKey = ConfigurationManager.AppSettings["NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY"];//Environment.GetEnvironmentVariable("NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY");
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("test@example.com", "Example User");
+            var subject = message.Subject;
+            var to = new EmailAddress("test@example.com", "Example User");
+            var plainTextContent = message.Body;
+            var htmlContent = message.Body;
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
+
+            // Send the email.
+            if (client != null)
+            {
+                await client.SendEmailAsync(msg);
+            }
+            else
+            {
+                Trace.TraceError("Failed to create Web transport.");
+                await Task.FromResult(0);
+            }
         }
     }
 
