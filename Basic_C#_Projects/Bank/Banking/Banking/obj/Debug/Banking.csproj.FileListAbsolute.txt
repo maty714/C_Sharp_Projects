@@ -109,3 +109,7 @@ C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.InitialCreate.resources
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.csproj.GenerateResource.cache
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.AddFirstLastName.resources
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\StarkbankEcdsa.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.xml
