@@ -151,7 +151,7 @@ namespace Banking.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName }; //changed name from "ApplicationUser
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName }; 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -171,6 +171,13 @@ namespace Banking.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        public static ApplicationUser UserModel(RegisterViewModel model)
+        {
+            var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
+            return user;
+        }
+
 
         //
         // GET: /Account/ConfirmEmail
