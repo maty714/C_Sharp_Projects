@@ -42,7 +42,7 @@ namespace Banking
             //// Create a Web transport for sending email.
             //var transportWeb = new Web(credentials);
 
-            var email = new Banking
+            
             var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");//ConfigurationManager.AppSettings["SENDGRID_API_KEY"];
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("cmatthew464@gmail.com", "Matt");
