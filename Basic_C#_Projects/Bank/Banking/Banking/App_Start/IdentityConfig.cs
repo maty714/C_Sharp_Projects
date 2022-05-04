@@ -42,12 +42,12 @@ namespace Banking
             //// Create a Web transport for sending email.
             //var transportWeb = new Web(credentials);
 
-
-            var apiKey = ConfigurationManager.AppSettings["NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY"];//Environment.GetEnvironmentVariable("NAME_OF_THE_ENVIRONMENT_VARIABLE_FOR_YOUR_SENDGRID_KEY");
+            var email = new Banking
+            var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");//ConfigurationManager.AppSettings["SENDGRID_API_KEY"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("test@example.com", "Example User");
+            var from = new EmailAddress("cmatthew464@gmail.com", "Matt");
             var subject = message.Subject;
-            var to = new EmailAddress("test@example.com", "Example User");
+            var to = new EmailAddress(, "Example User");
             var plainTextContent = message.Body;
             var htmlContent = message.Body;
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
