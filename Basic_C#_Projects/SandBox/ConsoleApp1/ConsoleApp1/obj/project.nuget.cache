@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "u8O6AdcsFcq9VCHnleCvvbX9zrEzmbXbY29fTN1yMkUQDHH/0HfkZiLU2M06ainLRWY9O7wn8HUORUigKmRfzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Matt\\OneDrive\\Documents\\GitHub\\C_Sharp_Projects\\Basic_C#_Projects\\SandBox\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matt\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

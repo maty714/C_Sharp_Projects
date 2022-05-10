@@ -1,0 +1,7 @@
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\bin\Debug\Read_Write.exe.config
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\bin\Debug\Read_Write.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\bin\Debug\Read_Write.pdb
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\obj\Debug\Read_Write.csproj.AssemblyReference.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\obj\Debug\Read_Write.csproj.CoreCompileInputs.cache
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\obj\Debug\Read_Write.exe
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\File_IO\Read_Write\Read_Write\obj\Debug\Read_Write.pdb
