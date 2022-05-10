@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Banking.Models;
-using System.Configuration;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using System.Diagnostics;
-using System.Net;
 
 namespace Banking
 {
@@ -47,7 +41,7 @@ namespace Banking
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("cmatthew464@gmail.com", "Matt");
             var subject = message.Subject;
-            var to = new EmailAddress(, "Example User");
+            var to = new EmailAddress(message.Destination, "Example User") ;
             var plainTextContent = message.Body;
             var htmlContent = message.Body;
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
