@@ -19,6 +19,8 @@ namespace Banking.Models
 
         public string FirstName { get; set; } // we are adding these to the database
         public string LastName { get; set; } // we are adding these to the database
+
+        public Account Selection { get; set; };
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -32,5 +34,11 @@ namespace Banking.Models
         {
             return new ApplicationDbContext();
         }
+    }
+
+    enum Account
+    {
+        Savings,
+        Checkings
     }
 }
