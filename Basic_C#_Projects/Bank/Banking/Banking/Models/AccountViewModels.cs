@@ -81,6 +81,7 @@ namespace Banking.Models
         public string ConfirmPassword { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public Account AccountSelection { get; set; }
 
     }
 

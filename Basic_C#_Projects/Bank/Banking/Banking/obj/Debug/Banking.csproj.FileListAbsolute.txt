@@ -113,3 +113,4 @@ C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\StarkbankEcdsa.dll
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.pdb
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.xml
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.EmptyMigration.resources

@@ -20,7 +20,7 @@ namespace Banking.Models
         public string FirstName { get; set; } // we are adding these to the database
         public string LastName { get; set; } // we are adding these to the database
 
-        public Account Selection { get; set; };
+        public Account AccountSelection { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -36,9 +36,9 @@ namespace Banking.Models
         }
     }
 
-    enum Account
+    public enum Account
     {
-        Savings,
-        Checkings
+        Savings = 0,
+        Checkings = 1
     }
 }
