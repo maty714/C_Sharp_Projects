@@ -80,56 +80,39 @@
                                 @Html.AntiForgeryToken()
                                
                                 @Html.ValidationSummary("", new { @class = "text-danger" })
-                                <div class="row ">
-                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                                    </div>
+                                <div class="row">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Tell us your Email!" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
                                 <div class="row ">
-                                    @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
-                                    </div>
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "What is your First Name?" })
+                                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
                                 <div class="row">
-                                    @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
-                                    </div>
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "What is your Last Name?" })
+                                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
                                 <div class="row">
-                                    @Html.LabelFor(m => m.AccountSelection, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.EnumDropDownListFor(m => m.AccountSelection, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.AccountSelection, "", new { @class = "text-danger" })
-                                    </div>
+                                    @Html.EnumDropDownListFor(m => m.AccountSelection, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.AccountSelection, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
                                 <div class="row">
-                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                                    </div>
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Choose a Password!" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
                                 <div class="row">
-                                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-                                    <div class="col-md-10">
-                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
-                                    </div>
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm Password..." })
+                                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
                                 </div>
                                 <br>
-
-                                <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
+                                <div class="row">
+                                    <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
+                                </div>
                             }
                         </div>
                     </div>
