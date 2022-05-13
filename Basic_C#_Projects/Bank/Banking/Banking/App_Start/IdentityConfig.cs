@@ -21,21 +21,6 @@ namespace Banking
         }
         private async Task configSendGridasync(IdentityMessage message)
         {
-            //var myMessage = new SendGridMessage();
-            //myMessage.AddTo(message.Destination);
-            //myMessage.From = new EmailAddress("Joe@contoso.com", "Joe S.");
-            //myMessage.Subject = message.Subject;
-            //myMessage.PlainTextContent = message.Body;
-            //myMessage.HtmlContent = message.Body;
-
-            //var credentials = new NetworkCredential(
-            //           ConfigurationManager.AppSettings["mailAccount"],
-            //           ConfigurationManager.AppSettings["mailPassword"]
-            //           );
-
-            //// Create a Web transport for sending email.
-            //var transportWeb = new Web(credentials);
-
             
             var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");//ConfigurationManager.AppSettings["SENDGRID_API_KEY"];
             var client = new SendGridClient(apiKey);
@@ -44,13 +29,13 @@ namespace Banking
             var to = new EmailAddress(message.Destination, "Example User") ;
             var plainTextContent = message.Body;
             var htmlContent = message.Body;
-            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-            var response = await client.SendEmailAsync(msg);
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent); //creates email
+            //var response = await client.SendEmailAsync(msg);
 
             // Send the email.
             if (client != null)
             {
-                await client.SendEmailAsync(msg);
+                await client.SendEmailAsync(msg); 
             }
             else
             {

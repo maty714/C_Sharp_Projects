@@ -3034,23 +3034,23 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #64a19d;
+  background-color: darkred;
   border-color: #64a19d;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: #558985;
+  color: red;
+  background-color:white;
   border-color: #50817e;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #558985;
+  background-color: red;
   border-color: #50817e;
   box-shadow: 0 0 0 0.25rem rgba(123, 175, 172, 0.5);
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #50817e;
+  background-color: red;
   border-color: #4b7976;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
@@ -3058,7 +3058,7 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #64a19d;
+  background-color: red;
   border-color: #64a19d;
 }
 
@@ -9962,8 +9962,8 @@ textarea.form-control-lg {
   }
 
   .px-lg-5 {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
   }
 
   .py-lg-0 {
@@ -11517,7 +11517,8 @@ body {
     color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(254 43 43);
+    font-weight: bold;
   }
   #mainNav .nav-link:active {
     color: #fff;

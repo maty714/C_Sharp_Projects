@@ -1,6 +1,4 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model Banking.Models.RegisterViewModel
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,13 +42,13 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Scorpion</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Welcome, you are one step away from joining our family!</h2>
-                        <a>@Html.ActionLink("Let's Begin", "Create", "Home", new { area = "" }, new { @class = "btn btn-primary" })</a>
-                        <!--<a class="btn btn-primary" href="~/Views/Home/Create.cshtml">Lets Begin</a>-->
+                        <!--<a>@Html.ActionLink("Let's Begin", "Create", "Home", new { area = "" }, new { @class = "btn btn-primary" })</a> -->
+                        <a class="btn btn-primary" href="#about">Lets Begin</a>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="about-section text-center" id="about">
+        <section class="about-section text-center">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
@@ -60,8 +58,8 @@
         </section>
         <!-- Footer-->
         <!-- Contact-->
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
+        <section class="signup-section">
+            <div class="container px-4 px-lg-5" id="about">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
@@ -77,28 +75,60 @@
                             <p class="text-warning border-white">
                                 @ViewBag.userNameError
                             </p>
-                            @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+                            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
                             {
+                                @Html.AntiForgeryToken()
+                               
+                                @Html.ValidationSummary("", new { @class = "text-danger" })
                                 <div class="row ">
-                                    <div class="col"><input class="form-control" name="firstName" type="text" placeholder="Enter first name..." aria-label="Enter first name..." /></div>
+                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row ">
+                                    @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col"><input class="form-control" name="lastName" type="text" placeholder="Enter last name..." aria-label="Enter last name..." /></div>
+                                    @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col"><input class="form-control" name="emailAddress" type="text" placeholder="Enter email address..." aria-label="Enter email address..." /></div>
+                                    @Html.LabelFor(m => m.AccountSelection, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.EnumDropDownListFor(m => m.AccountSelection, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.AccountSelection, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col"><input class="form-control" name="userName" type="text" placeholder="Pick a username..." aria-label="Pick a username..." /></div>
+                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col"><input class="form-control" name="password" type="password" placeholder="Choose a password..." aria-label="Choose a password..." /></div>
+                                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
                                 <br>
+
                                 <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
                             }
                         </div>
