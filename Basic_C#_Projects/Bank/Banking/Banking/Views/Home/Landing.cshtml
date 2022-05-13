@@ -56,14 +56,15 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <!-- Contact-->
-        <section class="signup-section">
-            <div class="container px-4 px-lg-5" id="about">
+        <!-- End Masthead-->
+        <div class="fading"></div>
+        <!-- Begin Form-->
+        <section class="signup-section" id="about">
+            <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <h2 class="text-white mb-5">Register</h2>
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -78,7 +79,7 @@
                             @using (Html.BeginForm("Register", "Account", FormMethod.Post))
                             {
                                 @Html.AntiForgeryToken()
-                               
+
                                 @Html.ValidationSummary("", new { @class = "text-danger" })
                                 <div class="row">
                                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Tell us your Email!" })
@@ -111,7 +112,7 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <button type="submit" class="btn btn-primary no-gutters center-block">Sign Up!</button>
+                                    <button type="submit" class="btn btn-primary no-gutters center-block" value="Register">Sign Up!</button>
                                 </div>
                             }
                         </div>
@@ -119,6 +120,7 @@
                 </div>
             </div>
         </section>
+        <!-- End Form-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
