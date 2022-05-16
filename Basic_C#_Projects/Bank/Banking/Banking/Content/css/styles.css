@@ -71,7 +71,7 @@
 .fading {
     height: 9vh;
     margin: 0vh;
-    background: linear-gradient(black 0%, black 10%, black 80%, darkred 100%);
+    background: linear-gradient(black 0%, black 10%, black 80%, #3d516c 100%);
 }
 
 *,
@@ -11648,14 +11648,15 @@ body {
 
 .signup-section {
    padding: 10rem 0;
-   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/desertMountain.jpg");
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/desertMountain.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
    background-size: cover;
+   
 }
 .signup-section .form-signup input {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgb(223 45 45 / 0.00) !important;
   padding: 1.25rem 2rem;
   height: auto;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
