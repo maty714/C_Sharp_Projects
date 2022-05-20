@@ -1,8 +1,8 @@
 ﻿@{
     //Layout = "~/Views/Shared/_Layout.cshtml";
-    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
     string layout = "";
-    if (controller == "Home")
+    if (action == "Register")
     {
         //layout = "~/Views/Shared/_otherLayout.cshtml";
         layout = null;
