@@ -25,4 +25,4 @@ This project is an MVC Web Application using Microsoft Server Management Studio 
 
 This project is an MVC Web Application using Microsoft Server Managemnet Studio which allows users to create a bank account, and deposit money.
 
-NOTE* This project is still under construction!
+NOTE* This project is still under construction and has moved to this project which will have more functionality [Banking](https://github.com/maty714/C_Sharp_Projects/tree/main/Basic_C%23_Projects/Bank/Banking)
