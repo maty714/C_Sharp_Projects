@@ -114,3 +114,10 @@ C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.pdb
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\SendGrid.xml
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.EmptyMigration.resources
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\Twilio.dll
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\bin\Twilio.xml
