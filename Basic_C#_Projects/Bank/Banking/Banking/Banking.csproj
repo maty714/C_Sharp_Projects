@@ -205,10 +205,19 @@
     <Compile Include="Migrations\202205110416475_AddAccountSelect.Designer.cs">
       <DependentUpon>202205110416475_AddAccountSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206200302036_UserAccounts.cs" />
+    <Compile Include="Migrations\202206200302036_UserAccounts.Designer.cs">
+      <DependentUpon>202206200302036_UserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206240431009_userAccountV2.cs" />
+    <Compile Include="Migrations\202206240431009_userAccountV2.Designer.cs">
+      <DependentUpon>202206240431009_userAccountV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\userAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -237,6 +246,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Notes.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -312,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205110416475_AddAccountSelect.resx">
       <DependentUpon>202205110416475_AddAccountSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206200302036_UserAccounts.resx">
+      <DependentUpon>202206200302036_UserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206240431009_userAccountV2.resx">
+      <DependentUpon>202206240431009_userAccountV2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,25 @@
+﻿Locations:
+	-IdentityModels is where we go when we want to add columns to the dbo.aspnetusers table, then command: update-database in pmc
+	-the "context" in database language is essentially the pipeline back to sql server
+	-Register page to register
+	
+
+Models
+	ManageViewModels is where
+
+
+
+To Do:
+
+	Problems:
+	1. I think there was a problem with password reset not being sent to an email in a timely manner, or it gets sent when the program is closed
+	
+
+
+	Create:
+	1. user page when signed in
+	2. login page
+	3. account page with money
+	4. deposit page
+	5. 2 factor authentication text
+	6. Another table that connects to AspNetUser table with a one to many relationship
