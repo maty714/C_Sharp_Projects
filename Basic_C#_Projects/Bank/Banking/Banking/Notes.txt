@@ -22,4 +22,4 @@ To Do:
 	3. account page with money
 	4. deposit page
 	5. 2 factor authentication text
-	6. Another table that connects to AspNetUser table with a one to many relationship
+	6. Another table that connects to AspNetUser table with a one to many relationship [x]
