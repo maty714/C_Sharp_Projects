@@ -83,4 +83,18 @@ namespace Banking.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class AccountNameViewModel
+    {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+         
+    }
+
+    public class AccountInfoViewModel 
+    {
+
+        public int balance { get; set; }
+
+    }
 }

@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Banking.Models;
+using System.Collections.Generic;
 
 namespace Banking.Controllers
 {
@@ -73,6 +74,7 @@ namespace Banking.Controllers
                 return View(model);
             }
 
+            //this checks to see if the user has confirmed their account
             var user = await UserManager.FindByNameAsync(model.Email);
             if(user != null)
             {
@@ -90,6 +92,7 @@ namespace Banking.Controllers
             }
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
+
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -473,7 +476,28 @@ namespace Banking.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            
+
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var userID = db.Users.Select(x => x.Id).First();
+                var names = (from c in db.Users
+                             where c.Id == userID
+                             select c).ToList();
+
+                var userVM = new List<AccountNameViewModel>();
+                foreach (var name in names)
+                {
+                    var AccountNameViewModel = new AccountNameViewModel();
+                    AccountNameViewModel.firstName = name.FirstName;
+                    AccountNameViewModel.lastName = name.LastName;
+                    userVM.Add(AccountNameViewModel);
+                }
+
+                // return RedirectToAction("Index", "Home", userVM);
+                return View("~/Views/Home/Index.cshtml", userVM);
+            }
+            
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
