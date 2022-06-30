@@ -494,8 +494,9 @@ namespace Banking.Controllers
                     userVM.Add(AccountNameViewModel);
                 }
 
-                // return RedirectToAction("Index", "Home", userVM);
+                //return RedirectToAction("Index", "Home", userVM);
                 return View("~/Views/Home/Index.cshtml", userVM);
+                
             }
             
         }

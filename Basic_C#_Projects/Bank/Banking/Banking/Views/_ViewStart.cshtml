@@ -2,15 +2,18 @@
     //Layout = "~/Views/Shared/_Layout.cshtml";
     var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
     string layout = "";
-    if (action == "Register" || action == "Index")
+
+    if (action == "Register" || action == "Index" || action == "RedirectToLocal" || action =="Login")
     {
         //layout = "~/Views/Shared/_otherLayout.cshtml";
         layout = null;
     }
     else
     {
-        //layout = "~/Views/Shared/_Layout.cshtml";
-        layout = null;
+        layout = "~/Views/Shared/_Layout.cshtml";
+        //layout = null;
     }
+
+
     Layout = layout;
 }
