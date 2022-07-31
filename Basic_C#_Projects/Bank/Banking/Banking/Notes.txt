@@ -2,7 +2,7 @@
 	-IdentityModels is where we go when we want to add columns to the dbo.aspnetusers table, then command: update-database in pmc
 	-the "context" in database language is essentially the pipeline back to sql server
 	-Register page to register
-	
+	-Login page css files are bootstrap.css and site.css
 
 Models
 	ManageViewModels is where
@@ -13,7 +13,7 @@ To Do:
 
 	Problems:
 	1. I think there was a problem with password reset not being sent to an email in a timely manner, or it gets sent when the program is closed
-	
+	2. clicking home link will throw an exception due to no model being present. Add in some conditional statements to deal with this
 
 
 	Create:
@@ -21,5 +21,6 @@ To Do:
 	2. login page
 	3. account page with money
 	4. deposit page
-	5. 2 factor authentication text
+	5. 2 factor authentication text (being put on hold due to expenses)
 	6. Another table that connects to AspNetUser table with a one to many relationship [x]
+	
