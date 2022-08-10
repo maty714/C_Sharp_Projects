@@ -113,4 +113,13 @@ namespace Banking.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
+
+    public class CreateAccountViewModel
+    {    
+        public string AccountName { get; set; }
+        public Account AccountSelection { get; set; }
+        public int MyProperty { get; set; }
+        public decimal Balance { get; set; }
+    }
 }
