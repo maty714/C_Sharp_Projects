@@ -124,3 +124,5 @@ C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.UserAccounts.resources
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.userAccountV2.resources
 C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.AddBalance.resources
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.addaccountname.resources
+C:\Users\Matt\OneDrive\Documents\GitHub\C_Sharp_Projects\Basic_C#_Projects\Bank\Banking\Banking\obj\Debug\Banking.Migrations.changebalancetodecimal.resources

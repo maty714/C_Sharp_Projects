@@ -87,14 +87,11 @@ namespace Banking.Models
     public class AccountNameViewModel
     {
         public string firstName { get; set; }
-        public string lastName { get; set; }
-         
+        public string lastName { get; set; }        
     }
 
     public class AccountInfoViewModel 
     {
-
         public int balance { get; set; }
-
     }
 }

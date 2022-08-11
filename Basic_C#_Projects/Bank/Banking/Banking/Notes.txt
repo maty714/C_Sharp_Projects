@@ -6,7 +6,8 @@
 	-Login page css files are bootstrap.css and site.css
 
 Models
-	ManageViewModels is where
+	private ActionResult RedirectToLocal(string returnUrl) contains the location of the list that your name goes into and shows in the dashboard
+	after login
 
 
 

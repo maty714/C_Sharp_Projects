@@ -217,6 +217,14 @@
     <Compile Include="Migrations\202208101910419_AddBalance.Designer.cs">
       <DependentUpon>202208101910419_AddBalance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208110244433_add account name.cs" />
+    <Compile Include="Migrations\202208110244433_add account name.Designer.cs">
+      <DependentUpon>202208110244433_add account name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208110245556_change balance to decimal.cs" />
+    <Compile Include="Migrations\202208110245556_change balance to decimal.Designer.cs">
+      <DependentUpon>202208110245556_change balance to decimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -339,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208101910419_AddBalance.resx">
       <DependentUpon>202208101910419_AddBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208110244433_add account name.resx">
+      <DependentUpon>202208110244433_add account name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208110245556_change balance to decimal.resx">
+      <DependentUpon>202208110245556_change balance to decimal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

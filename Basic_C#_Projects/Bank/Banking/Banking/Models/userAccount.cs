@@ -11,7 +11,8 @@ namespace Banking.Models
         [Key]
         public string AccountId { get; set; }
         public string accountType { get; set; }
+        public string AccountName { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
-        public int Balance { get; set; }
+        public decimal Balance { get; set; }
     }
 }
