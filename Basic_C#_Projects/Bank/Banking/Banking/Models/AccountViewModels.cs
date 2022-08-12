@@ -122,4 +122,11 @@ namespace Banking.Models
         public int MyProperty { get; set; }
         public decimal Balance { get; set; }
     }
+
+    //this class is used to present multiple view models within the user dashboard
+    public class MultipleViewModel
+    {
+        public CreateAccountViewModel CreateAccountViewModel { get; set; }
+        public AccountNameViewModel AccountNameView { get; set; }
+    }
 }

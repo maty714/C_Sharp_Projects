@@ -481,20 +481,13 @@ namespace Banking.Controllers
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 var userID = db.Users.Select(x => x.Id).First();
-                var names = (from c in db.Users
+                var name = (from c in db.Users
                              where c.Id == userID
-                             select c).ToList();
+                             select c).First();
+                
+                var userVM = new AccountNameViewModel();               
+                userVM.firstName = name.FirstName;
 
-                var userVM = new List<AccountNameViewModel>();
-                foreach (var name in names)
-                {
-                    var AccountNameViewModel = new AccountNameViewModel();
-                    AccountNameViewModel.firstName = name.FirstName;
-                    AccountNameViewModel.lastName = name.LastName;
-                    userVM.Add(AccountNameViewModel);
-                }
-
-                //return RedirectToAction("Index", "Home", userVM);
                 return View("~/Views/Home/Index.cshtml", userVM);
                 
             }

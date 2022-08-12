@@ -1,6 +1,7 @@
 ﻿@using Banking.Models
 
-@model List<AccountNameViewModel>
+
+@model AccountNameViewModel
 
 
 @{
@@ -42,13 +43,9 @@
                     <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            @foreach (var name in Model)
-                            {
-                                <li class="nav-item"><a class="nav-link" href="#!">Welcome @name.firstName</a></li>
-                            }
-
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">                          
+                            <li class="nav-item"><a class="nav-link" href="#!">Welcome @Model.firstName</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Link </a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -91,13 +88,9 @@
                     <button type="submit" class="btn btn-outline-success">Create</button>
                     <button type="button" class="btn btn-outline-danger" onclick="closeForm()">Cancel</button>
                 </form>
-
-                
             </div>
-
         </div>
     </div>
-
     <script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
